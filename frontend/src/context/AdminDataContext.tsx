@@ -84,10 +84,10 @@ interface AdminDataContextType {
 
 const defaultSettings: StudioSettings = {
   siteName: "Render Rituals",
-  email: CONTACT.email,
-  phone: CONTACT.phone,
-  whatsapp: CONTACT.whatsappNumber,
-  location: CONTACT.location,
+  email: CONTACT.email || "iamnikita2911@gmail.com",
+  phone: CONTACT.phone || "+91 9305308296",
+  whatsapp: CONTACT.whatsappNumber || CONTACT.phone || "+91 9305308296",
+  location: CONTACT.location || "Noida, Uttar Pradesh, India",
   isAvailable: true,
   statusText: "Available for Projects",
   adminPasscode: "nikita2026",

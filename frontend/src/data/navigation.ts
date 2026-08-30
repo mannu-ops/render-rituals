@@ -13,5 +13,3 @@ export const primaryNavigation = [
   { label: "Services", href: "/#services" },
   { label: "Process", href: "/#process" },
 ];
-export const NAVIGATION = navigation;
-

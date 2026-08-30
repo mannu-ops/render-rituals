@@ -4,6 +4,7 @@ export interface Testimonial {
   name: string;
   role?: string;
   location?: string;
+  scope?: string;
   rating?: number;
   company?: string;
   project?: string;

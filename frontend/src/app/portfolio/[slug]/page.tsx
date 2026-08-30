@@ -69,8 +69,10 @@ export default async function PortfolioProjectPage({
   const rendersCount = project.renders3D?.length || (project.gallery?.length || 1);
   const plansCount = project.plans2D?.length || 1;
 
-  const softwareList = Array.isArray(project.software)
-    ? project.software
+  const softwareList: string[] = Array.isArray(project.software)
+    ? (project.software as string[])
+    : typeof project.software === "string"
+    ? (project.software as string).split(",").map((s) => s.trim())
     : ["3ds Max", "Corona Renderer", "AutoCAD", "Photoshop"];
 
   return (
@@ -276,7 +278,7 @@ export default async function PortfolioProjectPage({
                 Software & Technical Stack
               </p>
               <div className="flex flex-wrap gap-2">
-                {softwareList.map((sw, idx) => (
+                {softwareList.map((sw: string, idx: number) => (
                   <span
                     key={idx}
                     className="rounded-full border border-white/10 bg-[#14171A] px-3.5 py-1.5 font-mono-spec text-xs text-[#F3F4F6]"

@@ -18,9 +18,10 @@ export interface SiteConfig {
 export interface ContactInfo {
   email: string;
   phone?: string;
+  whatsappNumber?: string;
+  whatsappUrl?: string;
   instagram: string;
   linkedin?: string;
   location: string;
   hours?: string;
 }
-
