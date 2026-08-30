@@ -32,7 +32,7 @@ export default function AdminTestimonialsPage() {
   const openEditModal = (t: Testimonial) => {
     setEditingTestimonial(t);
     setFormName(t.name);
-    setFormRole(t.role);
+    setFormRole(t.role || "Client");
     setFormLocation(t.location || "");
     setFormProject(t.project || "");
     setFormQuote(t.quote);
@@ -52,7 +52,7 @@ export default function AdminTestimonialsPage() {
       rating: formRating,
     };
 
-    if (editingTestimonial) {
+    if (editingTestimonial && editingTestimonial.id) {
       updateTestimonial(editingTestimonial.id, testimonialData);
     } else {
       addTestimonial(testimonialData);
@@ -133,7 +133,7 @@ export default function AdminTestimonialsPage() {
                 <button
                   type="button"
                   onClick={() => {
-                    if (confirm(`Delete review from ${t.name}?`)) {
+                    if (t.id && confirm(`Delete review from ${t.name}?`)) {
                       deleteTestimonial(t.id);
                     }
                   }}

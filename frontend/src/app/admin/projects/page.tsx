@@ -32,6 +32,12 @@ const handleImageError = (e: React.SyntheticEvent<HTMLImageElement, Event>) => {
   }
 };
 
+const defaultImages = [
+  "/images/projects/residential-01.jpg",
+  "/images/projects/residential-02.jpg",
+  "/images/projects/commercial-01.jpg",
+];
+
 export default function AdminProjectsPage() {
   const { projects, addProject, updateProject, deleteProject, showToast } = useAdminData();
   const [selectedCategory, setSelectedCategory] = useState<string>("All");

@@ -3,6 +3,8 @@ export interface Testimonial {
   quote: string;
   name: string;
   role?: string;
+  location?: string;
+  rating?: number;
   company?: string;
   project?: string;
   image?: string;
