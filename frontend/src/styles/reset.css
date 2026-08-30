@@ -1,0 +1,107 @@
+/* =========================================================
+   GLOBAL RESET & TYPOGRAPHY
+========================================================= */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: #14171A;
+  color-scheme: dark;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  margin: 0;
+  background: var(--rr-bg, #14171A);
+  color: var(--rr-fg, #F3F4F6);
+  font-family: var(--font-sans), sans-serif;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+  position: relative;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Touch targets */
+button,
+a,
+label,
+[role="button"] {
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Sticky Header Scroll Offset */
+section[id] {
+  scroll-margin-top: 5.5rem;
+}
+
+/* Selection Color */
+::selection {
+  background: #D49A6A;
+  color: #14171A;
+}
+
+/* Typography Helpers */
+.font-display {
+  font-family: var(--font-display), "Outfit", system-ui, sans-serif;
+  letter-spacing: -0.02em;
+}
+
+.font-mono-spec {
+  font-family: var(--font-mono), monospace;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #F3F4F6;
+}
+
+p, span, label, li {
+  color: inherit;
+}
+
+/* High Contrast Darkness Remaps */
+.text-black,
+.text-neutral-900,
+.text-zinc-900,
+.text-gray-900 {
+  color: #F3F4F6 !important;
+}
+
+.text-\[\#161513\],
+.text-\[\#171717\],
+.text-\[\#111111\],
+.text-\[\#12110F\],
+.text-\[\#000000\],
+.text-\[\#1E2124\] {
+  color: #F3F4F6 !important;
+}
+
+.text-\[\#6B6760\],
+.text-\[\#555555\],
+.text-\[\#666666\],
+.text-\[\#777777\],
+.text-\[\#444444\] {
+  color: #8E98A5 !important;
+}
+
+/* Reduced Motion Safety */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

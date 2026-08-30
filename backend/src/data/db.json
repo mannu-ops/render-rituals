@@ -1,0 +1,719 @@
+{
+  "projects": [
+    {
+      "id": "proj-1",
+      "slug": "warm-minimal-residence",
+      "title": "Warm Minimalist Residence",
+      "category": "Residential",
+      "year": "2026",
+      "location": "Noida Sector 128",
+      "client": "Private Penthouse",
+      "image": "http://localhost:5000https://res.cloudinary.com/dg3s2whrf/image/upload/v1788049597/render_rituals/portfolio/project-01.jpg",
+      "coverImage": "http://localhost:5000https://res.cloudinary.com/dg3s2whrf/image/upload/v1788049597/render_rituals/portfolio/project-01.jpg",
+      "excerpt": "4K Photorealistic Living & Dining Visuals accompanied by complete 2D Contractor Spatial CAD Layouts.",
+      "description": "A comprehensive residential case study featuring 4 multi-angle photorealistic 3D renders exploring 2700K ambient daylight and smoked walnut joinery, paired with detailed 2D architectural space plans showing furniture clearances and electrical zoning.",
+      "scope": "Full 3D CGI Visualization + 2D Space Planning",
+      "services": [
+        "3D CGI Visualization",
+        "2D Space Planning",
+        "Material Direction",
+        "Contractor CAD Package"
+      ],
+      "software": [
+        "3ds Max",
+        "Corona Renderer",
+        "AutoCAD",
+        "Photoshop"
+      ],
+      "featured": true,
+      "published": true,
+      "gallery": [
+        "http://localhost:5000https://res.cloudinary.com/dg3s2whrf/image/upload/v1788049597/render_rituals/portfolio/project-01.jpg",
+        "http://localhost:5000https://res.cloudinary.com/dg3s2whrf/image/upload/v1788049598/render_rituals/portfolio/project-02.jpg",
+        "http://localhost:5000https://res.cloudinary.com/dg3s2whrf/image/upload/v1788049601/render_rituals/portfolio/project-03.jpg",
+        "http://localhost:5000https://res.cloudinary.com/dg3s2whrf/image/upload/v1788049603/render_rituals/portfolio/project-04.jpg"
+      ],
+      "renders3D": [
+        {
+          "id": "r-1",
+          "title": "Living Room Daytime Atmosphere",
+          "image": "http://localhost:5000https://res.cloudinary.com/dg3s2whrf/image/upload/v1788049597/render_rituals/portfolio/project-01.jpg",
+          "tag": "4K Daylight Master View",
+          "description": "Natural southern light diffusing over cast slate flooring and low-profile modular seating."
+        },
+        {
+          "id": "r-2",
+          "title": "Smoked Walnut Kitchen Joinery",
+          "image": "http://localhost:5000https://res.cloudinary.com/dg3s2whrf/image/upload/v1788049598/render_rituals/portfolio/project-02.jpg",
+          "tag": "Material & Detail Closeup",
+          "description": "Seamless concealed cabinetry, fluted island detailing, and concealed ambient LED strips."
+        },
+        {
+          "id": "r-3",
+          "title": "Master Suite & Reading Nook",
+          "image": "http://localhost:5000https://res.cloudinary.com/dg3s2whrf/image/upload/v1788049601/render_rituals/portfolio/project-03.jpg",
+          "tag": "2700K Evening Mood",
+          "description": "Warm atmospheric twilight pass with textured wall finish and integrated floating nightstands."
+        },
+        {
+          "id": "r-4",
+          "title": "Dining & Gallery Corridor View",
+          "image": "http://localhost:5000https://res.cloudinary.com/dg3s2whrf/image/upload/v1788049603/render_rituals/portfolio/project-04.jpg",
+          "tag": "Spatial Proportion Angle",
+          "description": "Clean axial perspective highlighting circulation pathways and bespoke stone table."
+        }
+      ],
+      "plans2D": [
+        {
+          "id": "p-1",
+          "title": "Master Space Planning & Furniture Layout",
+          "image": "/images/cad/plan-01.jpg",
+          "sheetType": "Primary Architectural Layout",
+          "scale": "1:50",
+          "description": "Clear demarcation of living, dining, and open-plan kitchen with standard walkway clearances."
+        },
+        {
+          "id": "p-2",
+          "title": "Dimensioned Contractor Execution Plan",
+          "image": "/images/cad/plan-02.jpg",
+          "sheetType": "On-Site Working Drawing",
+          "scale": "1:25",
+          "description": "Exact partition wall coordinates, joinery offsets, and contractor measurement markers."
+        }
+      ]
+    },
+    {
+      "id": "proj-2",
+      "slug": "modular-kitchen-study",
+      "title": "Bespoke Modular Kitchen & Study Suite",
+      "category": "Residential",
+      "year": "2026",
+      "location": "Gurugram, NCR",
+      "client": "Villa 42",
+      "image": "http://localhost:5000https://res.cloudinary.com/dg3s2whrf/image/upload/v1788049598/render_rituals/portfolio/project-02.jpg",
+      "coverImage": "http://localhost:5000https://res.cloudinary.com/dg3s2whrf/image/upload/v1788049598/render_rituals/portfolio/project-02.jpg",
+      "excerpt": "Compact dual-zone spatial optimization with ergonomic cabinetry layout and 4K photorealistic lighting.",
+      "description": "Designed for a modern urban duplex, this project balances a high-performance modular kitchen with a quiet reading and work suite. Includes multi-perspective 3D renders and detailed 2D CAD elevation & clearance sheets.",
+      "scope": "Modular Space Planning & 3D Lighting Simulation",
+      "services": [
+        "3D Interior CGI",
+        "2D Modular Layouts",
+        "Cabinetry Elevations"
+      ],
+      "software": [
+        "3ds Max",
+        "Corona Renderer",
+        "AutoCAD"
+      ],
+      "featured": true,
+      "published": true,
+      "gallery": [
+        "http://localhost:5000https://res.cloudinary.com/dg3s2whrf/image/upload/v1788049598/render_rituals/portfolio/project-02.jpg",
+        "http://localhost:5000https://res.cloudinary.com/dg3s2whrf/image/upload/v1788049603/render_rituals/portfolio/project-04.jpg",
+        "http://localhost:5000https://res.cloudinary.com/dg3s2whrf/image/upload/v1788049607/render_rituals/portfolio/project-06.jpg"
+      ],
+      "renders3D": [
+        {
+          "id": "r-21",
+          "title": "Chef's Island & Breakfast Counter",
+          "image": "http://localhost:5000https://res.cloudinary.com/dg3s2whrf/image/upload/v1788049598/render_rituals/portfolio/project-02.jpg",
+          "tag": "4K Wide Perspective",
+          "description": "Matte graphite cabinetry paired with warm wood accents and concealed handle profiles."
+        },
+        {
+          "id": "r-22",
+          "title": "Integrated Study & Bookcase Wall",
+          "image": "http://localhost:5000https://res.cloudinary.com/dg3s2whrf/image/upload/v1788049603/render_rituals/portfolio/project-04.jpg",
+          "tag": "Focus Work Zone",
+          "description": "Acoustic wood slat panelling, floating oak desk, and glare-free task lighting."
+        }
+      ],
+      "plans2D": [
+        {
+          "id": "p-21",
+          "title": "Kitchen Work Triangle & Circulation Plan",
+          "image": "/images/cad/plan-03.jpg",
+          "sheetType": "Ergonomic Layout Sheet",
+          "scale": "1:20",
+          "description": "Optimized hob, sink, and refrigerator triangle with appliance clearance radiuses."
+        },
+        {
+          "id": "p-22",
+          "title": "Cabinetry Section & Elevation Drawing",
+          "image": "/images/cad/plan-02.jpg",
+          "sheetType": "Joinery Specification",
+          "scale": "1:25",
+          "description": "Internal drawer dividers, pantry pull-out dimensions, and counter height specs."
+        }
+      ]
+    },
+    {
+      "id": "proj-3",
+      "slug": "creative-office",
+      "title": "Tactile Creative Studio & Co-Working Hub",
+      "category": "Commercial",
+      "year": "2025",
+      "location": "South Delhi",
+      "client": "Design Collective",
+      "image": "http://localhost:5000https://res.cloudinary.com/dg3s2whrf/image/upload/v1788049601/render_rituals/portfolio/project-03.jpg",
+      "coverImage": "http://localhost:5000https://res.cloudinary.com/dg3s2whrf/image/upload/v1788049601/render_rituals/portfolio/project-03.jpg",
+      "excerpt": "Commercial spatial planning with acoustic breakout pods and cinematic 3D material storytelling.",
+      "description": "A 3,200 sq.ft commercial space transformed into flexible collaborative zones, private executive pods, and a central materials library. Includes 3D visualizations across daytime work hours and 2D egress/department zoning plans.",
+      "scope": "Commercial Space Planning & 3D CGI",
+      "services": [
+        "Commercial 3D CGI",
+        "2D Egress & Layouts",
+        "Acoustic Direction"
+      ],
+      "software": [
+        "3ds Max",
+        "Corona",
+        "AutoCAD",
+        "Photoshop"
+      ],
+      "featured": true,
+      "published": true,
+      "gallery": [
+        "http://localhost:5000https://res.cloudinary.com/dg3s2whrf/image/upload/v1788049601/render_rituals/portfolio/project-03.jpg",
+        "http://localhost:5000https://res.cloudinary.com/dg3s2whrf/image/upload/v1788049605/render_rituals/portfolio/project-05.jpg",
+        "http://localhost:5000https://res.cloudinary.com/dg3s2whrf/image/upload/v1788049597/render_rituals/portfolio/project-01.jpg"
+      ],
+      "renders3D": [
+        {
+          "id": "r-31",
+          "title": "Main Collaborative Work Commons",
+          "image": "http://localhost:5000https://res.cloudinary.com/dg3s2whrf/image/upload/v1788049601/render_rituals/portfolio/project-03.jpg",
+          "tag": "Open Studio Render",
+          "description": "Exposed concrete soffits, linear magnetic track lighting, and custom communal oak benches."
+        },
+        {
+          "id": "r-32",
+          "title": "Executive Presentation Lounge",
+          "image": "http://localhost:5000https://res.cloudinary.com/dg3s2whrf/image/upload/v1788049605/render_rituals/portfolio/project-05.jpg",
+          "tag": "Atmospheric Twilight Pass",
+          "description": "Acoustic fabric baffles, low lounge seating, and textured micro-cement wall finish."
+        }
+      ],
+      "plans2D": [
+        {
+          "id": "p-31",
+          "title": "Departmental Space Planning & Egress Map",
+          "image": "/images/cad/plan-04.jpg",
+          "sheetType": "Zoning & Circulation",
+          "scale": "1:100",
+          "description": "Primary entrance reception, 32-seat open benching, meeting rooms, and pantry hub."
+        },
+        {
+          "id": "p-32",
+          "title": "Lighting & Power Point Layout Plan",
+          "image": "/images/cad/plan-02.jpg",
+          "sheetType": "Electrical & Ceiling Plan",
+          "scale": "1:50",
+          "description": "Floor box locations, task luminaire grid, and emergency lighting paths."
+        }
+      ]
+    },
+    {
+      "id": "proj-4",
+      "slug": "material-study",
+      "title": "Tactility & Lighting Atmosphere Study",
+      "category": "Visualization",
+      "year": "2025",
+      "location": "Studio Research",
+      "client": "Material Lab",
+      "image": "http://localhost:5000https://res.cloudinary.com/dg3s2whrf/image/upload/v1788049603/render_rituals/portfolio/project-04.jpg",
+      "coverImage": "http://localhost:5000https://res.cloudinary.com/dg3s2whrf/image/upload/v1788049603/render_rituals/portfolio/project-04.jpg",
+      "excerpt": "Photorealistic CGI exploration of natural stone, fluted glass, and 2700K circadian lighting.",
+      "description": "An intensive visual study dedicated to rendering ultra-fine micro-textures, specular highlights on hand-applied lime plaster, and authentic refraction through fluted architectural glass.",
+      "scope": "Hyper-Realistic 3D Rendering & Material Direction",
+      "services": [
+        "Advanced 3D CGI",
+        "Texture Crafting",
+        "Lighting Calibrations"
+      ],
+      "software": [
+        "3ds Max",
+        "Corona Renderer",
+        "Substance 3D",
+        "Photoshop"
+      ],
+      "featured": true,
+      "published": true,
+      "gallery": [
+        "http://localhost:5000https://res.cloudinary.com/dg3s2whrf/image/upload/v1788049603/render_rituals/portfolio/project-04.jpg",
+        "http://localhost:5000https://res.cloudinary.com/dg3s2whrf/image/upload/v1788049607/render_rituals/portfolio/project-06.jpg",
+        "http://localhost:5000https://res.cloudinary.com/dg3s2whrf/image/upload/v1788049598/render_rituals/portfolio/project-02.jpg"
+      ],
+      "renders3D": [
+        {
+          "id": "r-41",
+          "title": "Lime Plaster & Smoked Timber Macro View",
+          "image": "http://localhost:5000https://res.cloudinary.com/dg3s2whrf/image/upload/v1788049603/render_rituals/portfolio/project-04.jpg",
+          "tag": "Texture Close-Up",
+          "description": "Subtle specular grazing light revealing authentic surface imperfections and timber grain."
+        },
+        {
+          "id": "r-42",
+          "title": "Fluted Glass & Brushed Bronze Screen",
+          "image": "http://localhost:5000https://res.cloudinary.com/dg3s2whrf/image/upload/v1788049607/render_rituals/portfolio/project-06.jpg",
+          "tag": "Refraction Pass",
+          "description": "Diffused backdrop silhouettes and warm metallic reflection tones."
+        }
+      ],
+      "plans2D": [
+        {
+          "id": "p-41",
+          "title": "Material Schedule & Finish Location Plan",
+          "image": "/images/cad/plan-01.jpg",
+          "sheetType": "Finish Legend Sheet",
+          "scale": "1:50",
+          "description": "Keyed plan mapping plaster types, wood stains, stone varieties, and paint codes."
+        }
+      ]
+    },
+    {
+      "id": "proj-5",
+      "slug": "residential-layout",
+      "title": "Serene Urban Villa Layout & 3D Showcase",
+      "category": "Architecture",
+      "year": "2029",
+      "location": "Greater Noida",
+      "client": "The Gupta Family",
+      "image": "http://localhost:5000https://res.cloudinary.com/dg3s2whrf/image/upload/v1788049605/render_rituals/portfolio/project-05.jpg",
+      "coverImage": "http://localhost:5000https://res.cloudinary.com/dg3s2whrf/image/upload/v1788049605/render_rituals/portfolio/project-05.jpg",
+      "excerpt": "Floor-by-floor space planning with courtyard integration and 4K photorealistic spatial renders.",
+      "description": "A multi-generational villa plan designed around a central double-height lightwell. The project integrates functional 2D floor plans with 3D experiential walkthrough frames.",
+      "scope": "Full 2D Architectural Layout + 3D Interior CGI",
+      "services": [
+        "2D Space Planning",
+        "3D Interior CGI",
+        "Circulation Mapping"
+      ],
+      "software": [
+        "AutoCAD",
+        "3ds Max",
+        "Corona"
+      ],
+      "featured": true,
+      "published": true,
+      "gallery": [
+        "http://localhost:5000https://res.cloudinary.com/dg3s2whrf/image/upload/v1788049605/render_rituals/portfolio/project-05.jpg",
+        "http://localhost:5000https://res.cloudinary.com/dg3s2whrf/image/upload/v1788049597/render_rituals/portfolio/project-01.jpg"
+      ],
+      "renders3D": [
+        {
+          "id": "r-51",
+          "tag": "4K Grand View",
+          "image": "http://localhost:5000https://res.cloudinary.com/dg3s2whrf/image/upload/v1788049605/render_rituals/portfolio/project-05.jpg",
+          "title": "Double Height Living & Courtyard Vista",
+          "description": "Vertical stone feature wall with cascading daylight from the skylight above."
+        },
+        {
+          "id": "r-52",
+          "tag": "Indoor-Outdoor Transition",
+          "image": "http://localhost:5000https://res.cloudinary.com/dg3s2whrf/image/upload/v1788049597/render_rituals/portfolio/project-01.jpg",
+          "title": "Courtyard Deck & Family Lounge",
+          "description": "Seamless sliding glass facade connecting the interior lounge to the green courtyard."
+        }
+      ],
+      "plans2D": [
+        {
+          "id": "p-51",
+          "image": "/images/cad/plan-01.jpg",
+          "scale": "1:50",
+          "title": "Ground Floor Spatial Masterplan",
+          "sheetType": "Primary Floor Plan",
+          "description": "Formal drawing room, courtyard garden, open kitchen, dining room, and guest suite."
+        },
+        {
+          "id": "p-52",
+          "image": "/images/cad/plan-02.jpg",
+          "scale": "1:50",
+          "title": "First Floor Private Suites & Family Terrace",
+          "sheetType": "Upper Level Plan",
+          "description": "Master bedroom suite with walk-in wardrobe, 2 children's bedrooms, and open terrace lounge."
+        }
+      ]
+    },
+    {
+      "id": "proj-6",
+      "slug": "studio-apartment",
+      "title": "Compact 650 sq.ft Micro-Studio Layout",
+      "category": "Residential",
+      "year": "2024",
+      "location": "Noida",
+      "client": "Private Client",
+      "image": "https://res.cloudinary.com/dg3s2whrf/image/upload/v1788049607/render_rituals/portfolio/project-06.jpg",
+      "coverImage": "https://res.cloudinary.com/dg3s2whrf/image/upload/v1788049607/render_rituals/portfolio/project-06.jpg",
+      "excerpt": "Every millimeter optimized with multi-functional concealed joinery and 4K photorealistic renders.",
+      "description": "A compact studio apartment where living, sleeping, and dining transform effortlessly through movable partition screens and concealed storage.",
+      "scope": "Micro-Space Planning & 3D Visualization",
+      "services": [
+        "2D Micro-Planning",
+        "3D CGI",
+        "Multi-Functional Joinery"
+      ],
+      "software": [
+        "AutoCAD",
+        "3ds Max",
+        "Corona"
+      ],
+      "featured": false,
+      "published": true,
+      "gallery": [
+        "https://res.cloudinary.com/dg3s2whrf/image/upload/v1788049607/render_rituals/portfolio/project-06.jpg",
+        "https://res.cloudinary.com/dg3s2whrf/image/upload/v1788049598/render_rituals/portfolio/project-02.jpg"
+      ],
+      "renders3D": [
+        {
+          "id": "r-61",
+          "tag": "Multi-Functional Pass",
+          "image": "https://res.cloudinary.com/dg3s2whrf/image/upload/v1788049607/render_rituals/portfolio/project-06.jpg",
+          "title": "Transformable Living & Sleeping Zone",
+          "description": "Concealed wall bed system with integrated shelving and floating storage plinth."
+        },
+        {
+          "id": "r-62",
+          "tag": "Compact Kitchen Pass",
+          "image": "https://res.cloudinary.com/dg3s2whrf/image/upload/v1788049598/render_rituals/portfolio/project-02.jpg",
+          "title": "Linear Kitchen & Breakfast Counter",
+          "description": "Full-height pantry tower, integrated induction cooktop, and slimline quartz counter."
+        }
+      ],
+      "plans2D": [
+        {
+          "id": "p-61",
+          "image": "/images/cad/plan-01.jpg",
+          "scale": "1:20",
+          "title": "Day-to-Night Multi-Functional Layout Plan",
+          "sheetType": "Spatial Dual-Mode Plan",
+          "description": "Shows furniture configuration during daytime work mode versus evening sleeping mode."
+        },
+        {
+          "id": "p-62",
+          "image": "/images/cad/plan-03.jpg",
+          "scale": "1:15",
+          "title": "Custom Joinery Dimension Drawing",
+          "sheetType": "Millwork Construction Plan",
+          "description": "Detailed millimeter measurements for custom carpentry and pull-out storage units."
+        }
+      ],
+      "atmosphere": "2700K Warm Daylight",
+      "turnaround": "3 – 5 Days"
+    }
+  ],
+  "services": [
+    {
+      "id": "3d-visualization",
+      "slug": "3d-visualization",
+      "title": "3D Interior & Architectural Visualization",
+      "name": "3D Visualization",
+      "shortTitle": "3D Renders",
+      "shortDescription": "Photorealistic 4K 3D renders with realistic lighting and materials.",
+      "description": "I create high-resolution, photorealistic 3D renders so you, your clients, or contractors can clearly visualize the space, lighting warmth, and materials before spending a single rupee on construction.",
+      "price": "₹3,500 – ₹6,000 / view",
+      "startingPrice": "₹3,500",
+      "priceNote": "Based on room scope and number of camera angles.",
+      "category": "3D Rendering",
+      "features": [
+        "4K Ultra-HD still renders",
+        "Realistic daylight & 2700K evening lighting",
+        "Accurate material, wood & fabric textures",
+        "Custom furniture & décor modeling",
+        "Fast turnaround (3–5 working days)"
+      ],
+      "deliverables": [
+        "4K Photorealistic Final Renders",
+        "Day / Night Lighting Versions",
+        "High-Resolution JPEG / PNG Deliverables"
+      ],
+      "coverImage": "http://localhost:5000https://res.cloudinary.com/dg3s2whrf/image/upload/v1788049603/render_rituals/portfolio/project-04.jpg",
+      "popular": true,
+      "published": true
+    },
+    {
+      "id": "2d-space-planning",
+      "slug": "2d-space-planning",
+      "title": "2D Space Planning & Floor Layouts",
+      "name": "2D Space Planning",
+      "shortTitle": "2D Layouts",
+      "shortDescription": "Dimensioned floor plans, furniture layouts, and movement clearances.",
+      "description": "I create functional 2D floor plans with exact furniture sizing, circulation pathways, and contractor-ready dimension sheets to ensure your space is efficient and easy to navigate.",
+      "price": "₹5,000 – ₹12,000 / project",
+      "startingPrice": "₹5,000",
+      "priceNote": "Based on square footage and total rooms.",
+      "category": "2D Planning",
+      "features": [
+        "Exact furniture placement with dimensions",
+        "Ergonomic circulation & walking clearance",
+        "Room zoning & storage optimization",
+        "Contractor-ready PDF / CAD drawing sheets",
+        "Fast turnaround (2–4 working days)"
+      ],
+      "deliverables": [
+        "Dimensioned 2D Floor Plan (PDF)",
+        "Furniture & Joinery Layout Guide",
+        "Contractor Clearance Measurements"
+      ],
+      "coverImage": "/images/cad/plan-01.jpg",
+      "popular": true,
+      "published": true
+    }
+  ],
+  "process": [
+    {
+      "number": "01",
+      "title": "Discovery & Brief",
+      "subtitle": "Understanding your lifestyle, vision & space",
+      "description": "We begin with a detailed conversation about how you plan to use the space, your aesthetic preferences, budget, site measurements, and timeline requirements.",
+      "deliverables": [
+        "Requirement Checklist",
+        "Project Timeline Estimate",
+        "Moodboard Direction"
+      ]
+    },
+    {
+      "number": "02",
+      "title": "Space Planning & Layout",
+      "subtitle": "Circulation, zoning & functional layout",
+      "description": "Developing 2D CAD floor plans that optimize circulation, natural light, furniture proportions, and storage efficiency before moving to visual styling.",
+      "deliverables": [
+        "2D Furniture Layouts",
+        "Zoning Options",
+        "Dimensioned Floor Plans"
+      ]
+    },
+    {
+      "number": "03",
+      "title": "Material & Concept Direction",
+      "subtitle": "Textures, color palettes & finishes",
+      "description": "Curating a harmonious palette of timber, stone, metal, textiles, and lighting fixtures tailored specifically to create a warm, calm, and sophisticated ambience.",
+      "deliverables": [
+        "Material Board",
+        "Color Palette",
+        "Fixture & Finish Recommendations"
+      ]
+    },
+    {
+      "number": "04",
+      "title": "3D Visualization & Modeling",
+      "subtitle": "High-resolution renders before execution",
+      "description": "Translating 2D plans and material choices into photorealistic 3D renders so you can clearly visualize the finished atmosphere from every perspective.",
+      "deliverables": [
+        "High-Res 3D Renders",
+        "Lighting Simulations",
+        "Camera Views"
+      ]
+    },
+    {
+      "number": "05",
+      "title": "Documentation & Execution",
+      "subtitle": "Production drawings & site handoff",
+      "description": "Finalizing clear technical drawings, elevations, material specifications, and vendor guidelines to ensure flawless on-site execution.",
+      "deliverables": [
+        "2D Working Drawings",
+        "BOQ & Specifications",
+        "Execution Support"
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "question": "What kind of projects do you take?",
+      "answer": "Residential interiors, selected commercial spaces, space planning, 3D visualization and drafting support."
+    },
+    {
+      "question": "Can I hire you only for 3D renders?",
+      "answer": "Yes. Visualization can be booked as a standalone service when the required inputs and scope are clear."
+    },
+    {
+      "question": "How do project prices work?",
+      "answer": "The website shows starting prices for common services. Final pricing depends on scope, area, number of views, complexity, revisions and timeline."
+    },
+    {
+      "question": "Do you work with architects and studios?",
+      "answer": "Yes. Project-based collaboration and visualization/drafting support are available for creative teams and studios."
+    },
+    {
+      "question": "How do I start a project?",
+      "answer": "Send a project brief through the Hire Me or Contact page. The scope, deliverables, timeline and quote can then be discussed before work begins."
+    }
+  ],
+  "stats": [
+    {
+      "value": "50+",
+      "label": "Projects Completed",
+      "sub": "3D CGI & 2D Plans"
+    },
+    {
+      "value": "1-on-1",
+      "label": "Direct Work",
+      "sub": "Zero Agency Middlemen"
+    },
+    {
+      "value": "3-5 Days",
+      "label": "Fast Turnaround",
+      "sub": "Reliable Delivery"
+    }
+  ],
+  "skills": [
+    {
+      "category": "Design Capabilities",
+      "skills": [
+        "Interior Design & Concepts",
+        "Space Planning & Zoning",
+        "Modular Kitchen & Furniture Design",
+        "Material Direction & Palettes",
+        "Lighting & Atmosphere Design"
+      ]
+    },
+    {
+      "category": "Software & Tools",
+      "skills": [
+        "AutoCAD (2D Drafting)",
+        "3ds Max & Corona Renderer",
+        "Adobe Photoshop & Lightroom",
+        "SketchUp 3D"
+      ]
+    }
+  ],
+  "testimonials": [
+    {
+      "id": "test-1",
+      "name": "Mannu Singh",
+      "role": "Principal Architect",
+      "location": "Studio Vistara, Delhi",
+      "quote": "Nikita’s lighting sense is exceptional. The materials feel completely physical and contractor-accurate.",
+      "rating": 5,
+      "scope": "Full 3D Render Package",
+      "project": ""
+    },
+    {
+      "id": "test-2",
+      "name": "Meera & Kunal Singhania",
+      "role": "Homeowners",
+      "location": "Penthouse, Noida Sec 128",
+      "quote": "The 2D space planning saved us weeks of confusion with our carpenters. Seeing 4K renders before building gave us complete clarity.",
+      "rating": 5,
+      "scope": "2D Layout + 3D Visuals"
+    },
+    {
+      "id": "test-3",
+      "name": "Devansh Kulkarni",
+      "role": "Design Lead",
+      "location": "Urban Atelier, Gurugram",
+      "quote": "Fast turnarounds, clean AutoCAD sheets, and zero agency middlemen. Working directly with Nikita is seamless.",
+      "rating": 5,
+      "scope": "Commercial Office CGI"
+    }
+  ],
+  "inquiries": [
+    {
+      "id": "inq-1788050886955",
+      "date": "Aug 30, 2026",
+      "status": "new",
+      "name": "czxczxc",
+      "email": "zxcxzc@ff",
+      "phone": "",
+      "service": "3D Visualization & Interior Architecture",
+      "message": "ssdfsdfdf"
+    },
+    {
+      "id": "inq-1788050883388",
+      "date": "Aug 30, 2026",
+      "status": "new",
+      "name": "czxczxc",
+      "email": "zxcxzc@ff",
+      "phone": "",
+      "service": "3D Visualization & Interior Architecture",
+      "message": "ssdfsdfdf"
+    },
+    {
+      "id": "inq-1788050849025",
+      "date": "Aug 30, 2026",
+      "status": "new",
+      "name": "ssdsdf",
+      "email": "Test@tes.com",
+      "phone": "324324324324",
+      "service": "3D Visualization & Interior Architecture",
+      "message": "524534534"
+    },
+    {
+      "id": "inq-1788050845247",
+      "date": "Aug 30, 2026",
+      "status": "new",
+      "name": "ssdsdf",
+      "email": "Test@tes.com",
+      "phone": "324324324324",
+      "service": "3D Visualization & Interior Architecture",
+      "message": "524534534"
+    },
+    {
+      "id": "inq-1788050578569",
+      "date": "Aug 30, 2026",
+      "status": "new",
+      "name": "Mannu",
+      "email": "test@tets.com",
+      "service": "3D Visualization & Interior Architecture",
+      "message": "sdsddsdf"
+    },
+    {
+      "id": "inq-1788050315674",
+      "date": "Aug 30, 2026",
+      "status": "new",
+      "name": "Mannu",
+      "email": "test@test.com",
+      "service": "3D Visualization & Interior Architecture",
+      "message": "Oii"
+    },
+    {
+      "id": "inq-1788047590937",
+      "date": "Aug 30, 2026",
+      "status": "new",
+      "name": "Ar. Rohit Malhotra",
+      "email": "rohit@test.com",
+      "service": "3D Visualization & Interior Architecture",
+      "message": "3D Render inquiry test for luxury villa."
+    },
+    {
+      "id": "inq-1",
+      "name": "Ar. Rohit Mehta",
+      "email": "rohit@mehtadesign.in",
+      "phone": "+91 98112 34567",
+      "service": "3D Photorealistic Interior CGI",
+      "message": "We have a 4BHK luxury penthouse in Gurugram requiring 8 photorealistic perspectives with warm 2700K evening lighting.",
+      "date": "Aug 29, 2026",
+      "status": "new"
+    },
+    {
+      "id": "inq-2",
+      "name": "Pooja Verma",
+      "email": "pooja.v@gmail.com",
+      "phone": "+91 97118 90123",
+      "service": "2D Space Planning & Layout",
+      "message": "Looking for an optimized furniture layout and partition plan for our 1,800 sq.ft duplex in Noida.",
+      "date": "Aug 28, 2026",
+      "status": "in_discussion"
+    },
+    {
+      "id": "inq-3",
+      "name": "Siddharth Oberoi",
+      "email": "siddharth@oberoidesign.com",
+      "phone": "+91 9920112233",
+      "service": "3D Visualization & Interior Architecture",
+      "message": "We have an ongoing boutique hospitality villa project in Goa and need consistent visual renders.",
+      "date": "Aug 26, 2026",
+      "status": "completed"
+    }
+  ],
+  "settings": {
+    "siteName": "Render Rituals",
+    "email": "temp83725@gmail.com",
+    "phone": "+91 9044900518",
+    "whatsapp": "919044900518",
+    "location": "Noida, Uttar Pradesh · Worldwide Remote",
+    "isAvailable": true,
+    "statusText": "Available for Projects",
+    "adminPasscode": "$2a$10$MQq2osSXZ2QbXh/QAIRICOtsrcupOTxPrHKOnQmakxkM1I4E4riRW"
+  }
+}

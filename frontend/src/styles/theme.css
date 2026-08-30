@@ -1,0 +1,30 @@
+/* =========================================================
+   THEME & COLOR TOKENS (Render Rituals)
+========================================================= */
+
+@theme {
+  --font-display: var(--font-display), "Outfit", system-ui, sans-serif;
+  --font-mono: var(--font-mono), "JetBrains Mono", monospace;
+  --font-sans: var(--font-sans), "Plus Jakarta Sans", system-ui, sans-serif;
+
+  --color-rr-slate-canvas: #14171A;
+  --color-rr-slate-surface: #1E2227;
+  --color-rr-slate-card: #252A30;
+  --color-rr-slate-elevated: #2D333B;
+  --color-rr-concrete-ash: #8E98A5;
+  --color-rr-titanium: #F3F4F6;
+  --color-rr-bronze: #D49A6A;
+  --color-rr-steel: #94A3B8;
+  --color-rr-graphite-dark: #0F1113;
+}
+
+:root {
+  --rr-bg: #14171A;
+  --rr-fg: #F3F4F6;
+  --rr-surface: #1E2227;
+  --rr-surface-card: #252A30;
+  --rr-border: rgba(255, 255, 255, 0.08);
+  --rr-border-hover: rgba(212, 154, 106, 0.4);
+  --rr-accent: #D49A6A;
+  --rr-steel: #94A3B8;
+}
