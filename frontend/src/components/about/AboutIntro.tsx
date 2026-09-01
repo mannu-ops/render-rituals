@@ -16,11 +16,11 @@ export default function AboutIntro({
         <span className="label-rituals text-[#D49A6A]">{eyebrow}</span>
       </div>
 
-      <h1 className="font-display mt-5 text-6xl leading-[0.9] tracking-[-0.04em] md:text-8xl text-[#F3F4F6]">
+      <h1 className="font-display mt-4 text-3xl xs:text-4xl sm:text-5xl lg:text-6xl font-normal leading-[1.08] tracking-tight text-[#F3F4F6]">
         {title}
       </h1>
 
-      <p className="mt-7 max-w-2xl text-base leading-relaxed text-[#8E98A5] md:text-lg">
+      <p className="mt-5 max-w-2xl text-sm leading-relaxed text-[#8E98A5] sm:text-base">
         {description}
       </p>
     </div>

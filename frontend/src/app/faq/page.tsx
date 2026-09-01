@@ -10,23 +10,25 @@ export const metadata = { title: "FAQ" };
 
 export default function FAQPage() {
   return (
-    <main className="px-5 py-20 md:px-10 md:py-28">
-      <p className="label-rituals">Frequently asked questions</p>
-      <h1 className="font-display mt-5 max-w-4xl text-6xl leading-[0.9] md:text-8xl">
-        Before we begin.
-      </h1>
+    <main className="px-5 py-12 sm:py-16 md:px-8 md:py-20 bg-[#14171A] text-[#F3F4F6]">
+      <div className="container-rituals">
+        <p className="label-rituals">Frequently asked questions</p>
+        <h1 className="font-display mt-3.5 max-w-4xl text-3xl xs:text-4xl sm:text-5xl lg:text-6xl font-normal leading-[1.08] tracking-tight text-[#F3F4F6]">
+          Before we begin.
+        </h1>
 
-      <div className="mt-16 divide-y divide-black/10 border-y border-black/10">
-        {faqs.map(([question, answer]) => (
-          <details key={question} className="group py-7">
-            <summary className="cursor-pointer list-none pr-8 font-display text-2xl marker:hidden">
-              {question}
-            </summary>
-            <p className="mt-4 max-w-2xl text-sm leading-7 text-black/50">
-              {answer}
-            </p>
-          </details>
-        ))}
+        <div className="mt-12 sm:mt-14 divide-y divide-white/10 border-y border-white/10 max-w-3xl">
+          {faqs.map(([question, answer]) => (
+            <details key={question} className="group py-6">
+              <summary className="cursor-pointer list-none pr-8 font-display text-lg sm:text-xl font-semibold text-[#F3F4F6] marker:hidden hover:text-[#D49A6A] transition-colors">
+                {question}
+              </summary>
+              <p className="mt-3.5 max-w-2xl text-sm leading-relaxed text-[#8E98A5]">
+                {answer}
+              </p>
+            </details>
+          ))}
+        </div>
       </div>
     </main>
   );

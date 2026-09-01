@@ -10,14 +10,14 @@ export default function ResumeHeader({
   location = "Noida, Uttar Pradesh, India",
 }: ResumeHeaderProps) {
   return (
-    <header className="border-b border-black/10 pb-10">
+    <header className="border-b border-white/10 pb-8 text-[#F3F4F6]">
       <p className="label-rituals">Curriculum vitae</p>
-      <h1 className="font-display mt-5 text-6xl leading-[0.9] tracking-[-0.04em] md:text-8xl">
+      <h1 className="font-display mt-3.5 text-3xl xs:text-4xl sm:text-5xl lg:text-6xl font-normal leading-[1.08] tracking-tight text-[#F3F4F6]">
         {name}
       </h1>
-      <div className="mt-6 flex flex-col gap-2 text-sm text-black/50 sm:flex-row sm:items-center sm:gap-5">
+      <div className="mt-4 flex flex-col gap-2 text-xs sm:text-sm text-[#8E98A5] sm:flex-row sm:items-center sm:gap-4">
         <span>{role}</span>
-        <span className="hidden sm:block">/</span>
+        <span className="hidden sm:block text-white/30">/</span>
         <span>{location}</span>
       </div>
     </header>

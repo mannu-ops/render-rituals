@@ -14,7 +14,7 @@ export default function NotFound() {
           <span>404 · Uncharted Space</span>
         </div>
 
-        <h1 className="font-display text-4xl sm:text-6xl md:text-7xl font-normal tracking-tight text-[#F3F4F6]">
+        <h1 className="font-display text-3xl xs:text-4xl sm:text-5xl font-normal tracking-tight text-[#F3F4F6]">
           Perspective <span className="italic text-[#D49A6A]">Not Found</span>
         </h1>
 

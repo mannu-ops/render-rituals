@@ -8,14 +8,14 @@ export const metadata = {
 
 export default function WorkPage() {
   return (
-    <main className="px-5 py-20 md:px-10 md:py-28">
-      <div className="mx-auto max-w-[1440px]">
-        <div className="mb-14">
+    <main className="px-5 py-12 sm:py-16 md:px-8 md:py-20 bg-[#14171A] text-[#F3F4F6]">
+      <div className="container-rituals">
+        <div className="mb-10 sm:mb-12">
           <p className="label-rituals">Portfolio</p>
-          <h1 className="font-display mt-5 max-w-5xl text-6xl leading-[0.9] md:text-8xl">
+          <h1 className="font-display mt-3.5 max-w-4xl text-3xl xs:text-4xl sm:text-5xl lg:text-6xl font-normal leading-[1.08] tracking-tight text-[#F3F4F6]">
             Selected work.
           </h1>
-          <p className="mt-7 max-w-xl text-sm leading-7 text-black/50">
+          <p className="mt-4 sm:mt-5 max-w-xl text-sm leading-relaxed text-[#8E98A5]">
             A collection of residential interiors, commercial space planning, photorealistic 3D renders, and material studies crafted with intention and clarity.
           </p>
         </div>

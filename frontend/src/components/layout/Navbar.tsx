@@ -263,7 +263,7 @@ export default function Navbar() {
           : "py-3 sm:py-4 lg:py-5"
           }`}
       >
-        <div className="mx-auto w-full max-w-7xl">
+        <div className="mx-auto w-full max-w-[1280px]">
           <nav
             className={`flex w-full items-center justify-between rounded-full border transition-all duration-300 ${isScrolled
               ? "border-white/15 bg-[#14171A]/95 px-3 py-1.5 sm:px-4 sm:py-2 lg:px-5 lg:py-2 shadow-2xl backdrop-blur-2xl"

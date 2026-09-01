@@ -16,7 +16,7 @@ export default function ServiceDetail({ slug }: { slug: string }) {
             <ArrowLeft size={14} />
             Back to services
           </Link>
-          <h1 className="font-display mt-14 text-6xl leading-none md:text-8xl">
+          <h1 className="font-display mt-8 text-3xl sm:text-4xl text-[#F3F4F6]">
             Service not found.
           </h1>
         </div>
@@ -33,64 +33,64 @@ export default function ServiceDetail({ slug }: { slug: string }) {
   ];
 
   return (
-    <article className="pt-32 md:pt-40">
-      <div className="mx-auto max-w-[1440px] px-5 md:px-10">
+    <article className="pt-24 md:pt-32 bg-[#14171A] text-[#F3F4F6]">
+      <div className="container-rituals">
         <Link
           href="/services"
-          className="inline-flex items-center gap-2 text-[10px] uppercase tracking-[0.14em] text-black/40 hover:text-black"
+          className="inline-flex items-center gap-2 text-[10px] uppercase tracking-wider text-[#8E98A5] hover:text-[#D49A6A]"
         >
           <ArrowLeft size={13} />
           All services
         </Link>
 
-        <div className="mt-12 grid gap-10 lg:grid-cols-[1.15fr_.85fr] lg:items-end">
+        <div className="mt-8 grid gap-8 lg:grid-cols-[1.15fr_.85fr] lg:items-end">
           <div>
             <p className="label-rituals">{service.category}</p>
-            <h1 className="font-display mt-5 text-6xl leading-[0.82] md:text-8xl">
+            <h1 className="font-display mt-3.5 text-3xl xs:text-4xl sm:text-5xl lg:text-6xl font-normal leading-[1.08] tracking-tight text-[#F3F4F6]">
               {service.title}
             </h1>
           </div>
 
-          <p className="max-w-md text-sm leading-7 text-black/50">
+          <p className="max-w-md text-sm leading-relaxed text-[#8E98A5]">
             {service.description}
           </p>
         </div>
 
         {service.coverImage && (
-          <div className="mt-14 overflow-hidden bg-[#dedbd2]">
+          <div className="mt-10 sm:mt-12 overflow-hidden rounded-2xl sm:rounded-3xl border border-white/10 bg-[#1E2227]">
             <img
               src={service.coverImage}
               alt={service.title}
-              className="aspect-[16/8] w-full object-cover"
+              className="aspect-[16/8] max-h-[500px] w-full object-cover"
             />
           </div>
         )}
 
-        <div className="grid gap-12 py-20 md:grid-cols-[.55fr_1.45fr] md:py-28">
+        <div className="grid gap-8 py-14 md:grid-cols-[.45fr_1.55fr] md:py-20 border-t border-white/10 mt-12">
           <div>
             <p className="label-rituals">What&apos;s included</p>
-            <div className="mt-8">
+            <div className="mt-6">
               <p className="label-rituals">Starting from</p>
-              <p className="font-display mt-2 text-3xl">{service.price || service.startingPrice}</p>
+              <p className="font-display mt-1.5 text-2xl sm:text-3xl font-semibold text-[#D49A6A]">{service.price || service.startingPrice}</p>
             </div>
           </div>
 
           <div>
-            <ul className="border-t border-black/10">
+            <ul className="border-t border-white/10">
               {features.map((feature) => (
                 <li
                   key={feature}
-                  className="flex gap-4 border-b border-black/10 py-5 text-sm text-black/65"
+                  className="flex gap-3 border-b border-white/10 py-4 text-xs sm:text-sm text-[#D1D5DB]"
                 >
-                  <Check size={16} className="mt-0.5 shrink-0" />
+                  <Check size={16} className="mt-0.5 shrink-0 text-[#D49A6A]" />
                   {feature}
                 </li>
               ))}
             </ul>
 
             <Link
-              href="/hire-me"
-              className="group mt-8 inline-flex items-center gap-3 rounded-full bg-[#171717] px-5 py-3.5 text-xs text-white"
+              href="/#contact"
+              className="group mt-8 inline-flex items-center gap-2 rounded-full bg-[#D49A6A] px-6 py-3.5 text-xs font-semibold uppercase tracking-wider text-[#14171A] hover:bg-[#E5A97C]"
             >
               Request this service
               <ArrowUpRight

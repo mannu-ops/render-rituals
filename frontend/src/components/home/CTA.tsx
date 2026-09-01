@@ -3,21 +3,21 @@ import { ArrowUpRight } from "lucide-react";
 
 export default function CTA() {
   return (
-    <section className="bg-[#d9d2c6] py-24 md:py-36">
+    <section className="bg-[#0F1113] py-16 sm:py-20 md:py-24 text-[#F3F4F6] border-t border-white/10">
       <div className="container-rituals">
-        <p className="text-[10px] uppercase tracking-[0.24em] text-black/45">
+        <p className="label-rituals">
           Have a space in mind?
         </p>
-        <h2 className="font-display mt-5 max-w-5xl text-6xl leading-[0.9] tracking-tight md:text-8xl">
-          Let&apos;s turn your idea into a place.
+        <h2 className="font-display mt-4 max-w-3xl text-3xl xs:text-4xl sm:text-5xl md:text-6xl font-normal leading-[1.08] tracking-tight text-[#F3F4F6]">
+          Let&apos;s turn your idea into a <span className="italic text-[#D49A6A]">reality</span>.
         </h2>
         <Link
-          href="/hire-me"
-          className="group mt-10 inline-flex items-center gap-4 rounded-full bg-[#171717] px-6 py-4 text-sm text-white"
+          href="/#contact"
+          className="group mt-8 inline-flex items-center gap-3 rounded-full bg-[#D49A6A] px-6 py-3.5 text-xs font-semibold uppercase tracking-wider text-[#14171A] hover:bg-[#E5A97C]"
         >
           Start a Project
           <ArrowUpRight
-            size={17}
+            size={15}
             className="transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
           />
         </Link>

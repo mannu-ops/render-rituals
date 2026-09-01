@@ -10,12 +10,12 @@ export default function ExperienceIntro({
   description = "A selection of professional experience, responsibilities and project-focused skills across interior design and visualization.",
 }: ExperienceIntroProps) {
   return (
-    <div className="max-w-4xl">
+    <div className="max-w-3xl">
       <p className="label-rituals">{eyebrow}</p>
-      <h1 className="font-display mt-5 text-6xl leading-[0.92] tracking-[-0.04em] md:text-8xl">
+      <h1 className="font-display mt-3.5 text-3xl xs:text-4xl sm:text-5xl lg:text-6xl font-normal leading-[1.08] tracking-tight text-[#F3F4F6]">
         {title}
       </h1>
-      <p className="mt-7 max-w-2xl text-sm leading-7 text-black/50 md:text-base">
+      <p className="mt-4 sm:mt-5 max-w-2xl text-sm leading-relaxed text-[#8E98A5] sm:text-base">
         {description}
       </p>
     </div>

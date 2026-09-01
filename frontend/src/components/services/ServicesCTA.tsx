@@ -3,18 +3,18 @@ import { ArrowUpRight } from "lucide-react";
 
 export default function ServicesCTA() {
   return (
-    <section className="bg-[#d9d2c6] py-20 md:py-28">
-      <div className="container-rituals grid gap-8 lg:grid-cols-[.55fr_1.45fr]">
+    <section className="bg-[#0F1113] py-16 sm:py-20 md:py-24 text-[#F3F4F6] border-t border-white/10">
+      <div className="container-rituals grid gap-8 lg:grid-cols-[.4fr_1.6fr]">
         <p className="label-rituals">Not sure what you need?</p>
 
         <div>
-          <h2 className="font-display max-w-4xl text-5xl leading-[0.9] md:text-7xl">
+          <h2 className="font-display max-w-2xl text-2xl xs:text-3xl sm:text-4xl md:text-5xl font-normal leading-[1.12] tracking-tight text-[#F3F4F6]">
             Tell me about the project. We&apos;ll figure out the scope together.
           </h2>
 
           <Link
-            href="/hire-me"
-            className="group mt-8 inline-flex items-center gap-3 rounded-full border border-black/15 px-5 py-3.5 text-xs"
+            href="/#contact"
+            className="group mt-8 inline-flex items-center gap-3 rounded-full bg-[#D49A6A] px-6 py-3.5 text-xs font-semibold uppercase tracking-wider text-[#14171A] hover:bg-[#E5A97C]"
           >
             Start a project brief
             <ArrowUpRight

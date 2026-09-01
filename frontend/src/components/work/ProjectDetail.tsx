@@ -23,7 +23,7 @@ export default function ProjectDetail({ slug }: ProjectDetailProps) {
             Back to work
           </Link>
 
-          <h1 className="font-display mt-14 text-6xl leading-none md:text-8xl">
+          <h1 className="font-display mt-8 text-3xl sm:text-4xl text-[#F3F4F6]">
             Project not found.
           </h1>
         </div>
@@ -41,31 +41,31 @@ export default function ProjectDetail({ slug }: ProjectDetailProps) {
   const galleryImages = project.gallery?.length ? project.gallery : [project.image];
 
   return (
-    <article className="pt-32 md:pt-40">
-      <div className="mx-auto max-w-[1440px] px-5 md:px-10">
+    <article className="pt-24 md:pt-32 bg-[#14171A] text-[#F3F4F6]">
+      <div className="container-rituals">
         <Link
           href="/work"
-          className="inline-flex items-center gap-2 text-[10px] uppercase tracking-[0.14em] text-black/40 hover:text-black"
+          className="inline-flex items-center gap-2 text-[10px] uppercase tracking-wider text-[#8E98A5] hover:text-[#D49A6A]"
         >
           <ArrowLeft size={13} />
           All work
         </Link>
 
-        <div className="mt-12 grid gap-10 lg:grid-cols-[1.2fr_.8fr] lg:items-end">
+        <div className="mt-8 grid gap-8 lg:grid-cols-[1.2fr_.8fr] lg:items-end">
           <div>
             <p className="label-rituals">{project.category}</p>
-            <h1 className="font-display mt-5 text-6xl leading-[0.82] md:text-8xl">
+            <h1 className="font-display mt-3.5 text-3xl xs:text-4xl sm:text-5xl lg:text-6xl font-normal leading-[1.08] tracking-tight text-[#F3F4F6]">
               {project.title}
             </h1>
           </div>
 
-          <p className="max-w-md text-sm leading-7 text-black/50 lg:pb-1">
+          <p className="max-w-md text-sm leading-relaxed text-[#8E98A5] lg:pb-1">
             {project.description || project.excerpt ||
               "A considered interior concept developed through space planning, material direction and visual storytelling."}
           </p>
         </div>
 
-        <div className="mt-14">
+        <div className="mt-10 sm:mt-12">
           <ProjectGallery
             images={galleryImages.map((src: string, idx: number) => ({
               src,
@@ -75,20 +75,20 @@ export default function ProjectDetail({ slug }: ProjectDetailProps) {
           />
         </div>
 
-        <div className="mt-10">
+        <div className="mt-8 sm:mt-10">
           <ProjectMeta items={metadata} />
         </div>
 
-        <div className="grid gap-10 py-20 md:grid-cols-[.55fr_1.45fr] md:py-28">
+        <div className="grid gap-8 py-14 md:grid-cols-[.45fr_1.55fr] md:py-20 border-t border-white/10 mt-12">
           <p className="label-rituals">Project notes</p>
-          <div className="max-w-3xl">
-            <p className="font-display text-3xl leading-tight md:text-5xl">
+          <div className="max-w-2xl">
+            <p className="font-display text-xl sm:text-2xl md:text-3xl leading-snug text-[#F3F4F6]">
               {project.description ||
                 "A visual study of proportion, texture, light and the rituals of everyday life."}
             </p>
             <Link
-              href="/hire-me"
-              className="group mt-8 inline-flex items-center gap-2 rounded-full bg-[#171717] px-5 py-3.5 text-xs text-white"
+              href="/#contact"
+              className="group mt-8 inline-flex items-center gap-2 rounded-full bg-[#D49A6A] px-6 py-3.5 text-xs font-semibold uppercase tracking-wider text-[#14171A] hover:bg-[#E5A97C]"
             >
               Discuss a similar project
               <ArrowUpRight

@@ -56,8 +56,8 @@ export default function StudioIntro() {
         {/* Top Header Grid with 3D Studio Avatar Showcase */}
         <div className="grid gap-10 lg:grid-cols-[.42fr_.58fr] lg:items-center border-b border-white/10 pb-12 sm:pb-16">
           {/* Avatar Visual Card with 3D Waving Character & Interactive Holographic Badges */}
-          <div className="relative">
-            <div className="group relative aspect-square max-w-sm mx-auto lg:max-w-none overflow-hidden rounded-3xl border border-white/15 bg-[#1E2227] shadow-2xl transition-all duration-700 hover:border-[#D49A6A]/60">
+          <div className="relative flex justify-center">
+            <div className="group relative aspect-square w-full max-w-[340px] sm:max-w-[380px] overflow-hidden rounded-3xl border border-white/15 bg-[#1E2227] shadow-2xl transition-all duration-700 hover:border-[#D49A6A]/60">
               <img
                 src="/images/nikita-waving-avatar.jpg"
                 alt="Nikita — Render Rituals 3D & 2D Specialist"

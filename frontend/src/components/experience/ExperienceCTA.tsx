@@ -11,21 +11,21 @@ export default function ExperienceCTA({
   description = "For freelance projects, collaborations or hiring opportunities, get in touch and share the brief.",
 }: ExperienceCTAProps) {
   return (
-    <section className="border-t border-black/10 pt-10">
+    <section className="border-t border-white/10 pt-12 sm:pt-16 bg-[#14171A] text-[#F3F4F6]">
       <div className="grid gap-6 md:grid-cols-[1fr_auto] md:items-end">
         <div>
           <p className="label-rituals">Next step</p>
-          <h2 className="font-display mt-4 max-w-2xl text-5xl leading-[0.95] md:text-7xl">
+          <h2 className="font-display mt-3.5 max-w-2xl text-2xl xs:text-3xl sm:text-4xl md:text-5xl font-normal leading-[1.12] tracking-tight text-[#F3F4F6]">
             {title}
           </h2>
-          <p className="mt-5 max-w-xl text-sm leading-7 text-black/50">
+          <p className="mt-4 sm:mt-5 max-w-xl text-sm leading-relaxed text-[#8E98A5]">
             {description}
           </p>
         </div>
 
         <Link
-          href="/contact"
-          className="group inline-flex w-fit items-center gap-3 rounded-full bg-black px-6 py-4 text-xs text-white"
+          href="/#contact"
+          className="group inline-flex w-fit items-center gap-3 rounded-full bg-[#D49A6A] px-6 py-3.5 text-xs font-semibold uppercase tracking-wider text-[#14171A] hover:bg-[#E5A97C]"
         >
           Get in touch
           <ArrowUpRight

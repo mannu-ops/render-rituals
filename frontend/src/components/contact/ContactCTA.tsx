@@ -3,17 +3,17 @@ import { ArrowUpRight } from "lucide-react";
 
 export default function ContactCTA() {
   return (
-    <section className="bg-[#171717] py-20 text-white md:py-28">
+    <section className="bg-[#0F1113] py-16 sm:py-20 md:py-24 text-[#F3F4F6] border-t border-white/10">
       <div className="container-rituals">
-        <p className="label-rituals text-white/35">Prefer email?</p>
-        <div className="mt-5 flex flex-col gap-8 md:flex-row md:items-end md:justify-between">
-          <h2 className="font-display max-w-4xl text-5xl leading-[0.88] md:text-7xl">
-            Start with a simple hello.
+        <p className="label-rituals">Prefer email?</p>
+        <div className="mt-4 flex flex-col gap-8 md:flex-row md:items-end md:justify-between">
+          <h2 className="font-display max-w-2xl text-2xl xs:text-3xl sm:text-4xl md:text-5xl font-normal leading-[1.12] tracking-tight text-[#F3F4F6]">
+            Start with a simple <span className="italic text-[#D49A6A]">hello</span>.
           </h2>
 
           <Link
-            href="mailto:hello@renderrituals.com"
-            className="group inline-flex w-fit items-center gap-3 rounded-full bg-white px-5 py-3.5 text-xs text-black"
+            href="mailto:iamnikita2911@gmail.com"
+            className="group inline-flex w-fit items-center gap-3 rounded-full bg-[#D49A6A] px-6 py-3.5 text-xs font-semibold uppercase tracking-wider text-[#14171A] hover:bg-[#E5A97C]"
           >
             Email Render Rituals
             <ArrowUpRight

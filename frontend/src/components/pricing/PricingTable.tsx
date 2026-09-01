@@ -2,11 +2,11 @@ import { pricingPackages } from "@/data";
 
 export default function PricingTable() {
   return (
-    <section className="border-y border-white/10 py-20 md:py-28">
-      <div className="mx-auto max-w-[1440px] px-5 md:px-10">
-        <div className="mb-10">
+    <section className="border-y border-white/10 py-16 sm:py-20 md:py-24 bg-[#111315]">
+      <div className="container-rituals">
+        <div className="mb-8 sm:mb-10">
           <p className="label-rituals">At a glance</p>
-          <h2 className="font-display mt-4 text-5xl leading-none text-[#F3F4F6] md:text-7xl">
+          <h2 className="font-display mt-3.5 text-2xl xs:text-3xl sm:text-4xl md:text-5xl font-normal leading-[1.12] tracking-tight text-[#F3F4F6]">
             Compare <span className="italic text-[#D49A6A]">scopes</span>.
           </h2>
         </div>
