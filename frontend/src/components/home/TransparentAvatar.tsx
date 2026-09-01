@@ -73,17 +73,17 @@ export default function TransparentAvatar() {
       {/* Floating 3D Character with gentle levitation animation */}
       <motion.div
         initial={{ opacity: 1, y: 0 }}
-        animate={{ y: [0, -12, 0] }}
+        animate={{ y: [0, -8, 0] }}
         transition={{
           y: { duration: 4, repeat: Infinity, ease: "easeInOut" }
         }}
-        className="relative z-10 flex flex-col items-center w-full min-h-[350px] sm:min-h-[420px] lg:min-h-[480px] justify-center"
+        className="relative z-10 flex flex-col items-center w-full min-h-[300px] sm:min-h-[360px] lg:min-h-[400px] justify-center"
       >
-        {/* The Cutout Canvas - ZERO WHITE FLASH */}
+        {/* The Cutout Canvas */}
         <div className="relative w-full flex justify-center">
           <canvas
             ref={canvasRef}
-            className={`h-auto w-full max-w-[280px] xs:max-w-[340px] sm:max-w-[440px] md:max-w-[480px] lg:max-w-[540px] drop-shadow-[0_25px_55px_rgba(0,0,0,0.85)] transition-opacity duration-300 ${
+            className={`h-auto w-full max-w-[240px] xs:max-w-[280px] sm:max-w-[340px] md:max-w-[380px] lg:max-w-[420px] drop-shadow-[0_20px_45px_rgba(0,0,0,0.85)] transition-opacity duration-300 ${
               loaded ? "opacity-100" : "opacity-0"
             }`}
             style={{ imageRendering: "auto" }}
