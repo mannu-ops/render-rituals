@@ -235,7 +235,7 @@ export default function AdminShell({ children, activeItem = "Overview" }: AdminS
         </header>
 
         {/* Page Children Container */}
-        <main className="flex-1 p-6 sm:p-8 md:p-10 max-w-7xl w-full mx-auto">
+        <main className="flex-1 p-3.5 xs:p-5 sm:p-8 md:p-10 max-w-7xl w-full mx-auto">
           {children}
         </main>
       </div>
