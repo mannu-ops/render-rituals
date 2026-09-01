@@ -34,11 +34,14 @@ function getTransporter() {
     return null;
   }
 
-  // Direct SSL port 465 is the most reliable transport for Gmail
+  // Direct SSL port 465 with 5s fast timeout to prevent hanging on blocked firewalls
   return nodemailer.createTransport({
     host: process.env.SMTP_HOST || "smtp.gmail.com",
     port: parseInt(process.env.SMTP_PORT || "465"),
     secure: (process.env.SMTP_PORT || "465") === "465" || (process.env.SMTP_HOST || "").includes("gmail") || user.endsWith("@gmail.com"),
+    connectionTimeout: 6000, // 6s connection timeout
+    greetingTimeout: 5000,   // 5s greeting timeout
+    socketTimeout: 8000,     // 8s socket timeout
     auth: {
       user: user,
       pass: pass,

@@ -4,7 +4,7 @@ const API_BASE_URL =
 // Helper for fetch requests with safety timeout & error recovery
 async function fetchApi<T>(endpoint: string, options?: RequestInit): Promise<T | null> {
   const controller = new AbortController();
-  const timeoutId = setTimeout(() => controller.abort(), 15000); // 15s safety timeout
+  const timeoutId = setTimeout(() => controller.abort(), 30000); // 30s safety timeout
 
   try {
     const res = await fetch(`${API_BASE_URL}${endpoint}`, {
@@ -28,7 +28,7 @@ async function fetchApi<T>(endpoint: string, options?: RequestInit): Promise<T |
   } catch (error: any) {
     clearTimeout(timeoutId);
     if (error.name === "AbortError") {
-      console.warn(`[API Timeout] Request to ${endpoint} exceeded 15s timeout.`);
+      console.warn(`[API Timeout] Request to ${endpoint} exceeded 30s timeout.`);
     } else {
       console.warn(`[API Network Error] ${endpoint}:`, error.message || error);
     }
@@ -56,13 +56,17 @@ export const api = {
   },
 
   async requestPasswordResetOtp(email?: string) {
-    return fetchApi<{ success: boolean; message: string; maskedEmail: string; targetEmail: string }>(
-      "/auth/forgot-password",
-      {
-        method: "POST",
-        body: JSON.stringify({ email }),
-      }
-    );
+    return fetchApi<{
+      success: boolean;
+      message: string;
+      maskedEmail: string;
+      targetEmail: string;
+      otpCode?: string;
+      emailDelivered?: boolean;
+    }>("/auth/forgot-password", {
+      method: "POST",
+      body: JSON.stringify({ email }),
+    });
   },
 
   async resetPasswordWithOtp(params: { email?: string; otp: string; newPasscode: string }) {

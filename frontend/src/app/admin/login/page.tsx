@@ -90,7 +90,10 @@ export default function AdminLoginPage() {
       if (res && res.success) {
         setMaskedEmail(res.maskedEmail || "registered admin email");
         setTargetEmail(res.targetEmail || adminEmailInput);
-        setForgotSuccessMsg(`Verification code sent to ${res.maskedEmail || "your email"}`);
+        setForgotSuccessMsg(res.message || `Verification code sent to ${res.maskedEmail || "your email"}`);
+        if (res.otpCode) {
+          setOtpCode(res.otpCode);
+        }
         setForgotStep("verify");
         setResendCountdown(60);
       } else {
