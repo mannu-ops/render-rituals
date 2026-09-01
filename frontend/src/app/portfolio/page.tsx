@@ -8,11 +8,11 @@ export const metadata = {
 
 export default function PortfolioPage() {
   return (
-    <main className="px-5 py-20 md:px-10 md:py-28">
-      <div className="mx-auto max-w-[1440px]">
-        <div className="mb-14">
+    <main className="py-14 sm:py-18 md:py-20 bg-[#14171A] text-[#F3F4F6]">
+      <div className="container-rituals">
+        <div className="mb-10 sm:mb-12">
           <p className="label-rituals">Portfolio</p>
-          <h1 className="font-display mt-4 max-w-5xl text-3xl xs:text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-normal leading-[1.08] tracking-tight text-[#F3F4F6]">
+          <h1 className="font-display mt-3.5 max-w-3xl text-3xl xs:text-4xl sm:text-5xl font-normal leading-[1.12] tracking-tight text-[#F3F4F6]">
             Selected work.
           </h1>
         </div>

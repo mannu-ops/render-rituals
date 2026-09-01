@@ -57,19 +57,19 @@ export default function ContactForm() {
 
   if (status === "success") {
     return (
-      <div className="card-luxury rounded-2xl p-8 md:p-12 border border-white/10 shadow-2xl">
+      <div className="card-luxury rounded-2xl p-6 md:p-8 border border-white/10 shadow-2xl">
         <CheckCircle2 size={24} className="text-[#D49A6A]" />
-        <h3 className="font-display mt-6 text-4xl leading-none text-[#F3F4F6]">
+        <h3 className="font-display mt-4 text-2xl sm:text-3xl font-medium leading-snug text-[#F3F4F6]">
           Enquiry received.
         </h3>
-        <p className="mt-4 max-w-md text-sm leading-relaxed text-[#8E98A5]">
+        <p className="mt-3 max-w-md text-sm leading-relaxed text-[#8E98A5]">
           Thank you for reaching out. We will review your project brief and respond within 24 hours.
         </p>
 
         <button
           type="button"
           onClick={() => setStatus("idle")}
-          className="mt-8 text-xs font-mono-spec uppercase tracking-wider text-[#D49A6A] hover:underline"
+          className="mt-6 text-xs font-mono-spec uppercase tracking-wider text-[#D49A6A] hover:underline"
         >
           Send another enquiry →
         </button>
@@ -78,7 +78,7 @@ export default function ContactForm() {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-8 card-luxury p-8 md:p-12 rounded-3xl border border-white/10">
+    <form onSubmit={handleSubmit} className="space-y-6 card-luxury p-6 sm:p-8 rounded-2xl sm:rounded-3xl border border-white/10">
       <div className="grid gap-8 md:grid-cols-2">
         <Field
           label="Name"

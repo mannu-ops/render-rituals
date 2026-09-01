@@ -8,23 +8,23 @@ export const metadata = {
 
 export default function PricingPage() {
   return (
-    <main className="px-5 py-20 md:px-10 md:py-28">
-      <div className="mx-auto max-w-[1440px]">
+    <main className="py-14 sm:py-18 md:py-20 bg-[#14171A] text-[#F3F4F6]">
+      <div className="container-rituals space-y-12 sm:space-y-16">
         <PricingIntro />
         
-        <div className="mt-16">
+        <div>
           <PricingGrid packages={pricingPackages} />
         </div>
 
-        <div className="mt-16">
+        <div>
           <PriceEstimator />
         </div>
 
-        <div className="mt-16">
+        <div>
           <PricingTable />
         </div>
 
-        <div className="mt-12">
+        <div>
           <PricingNote />
         </div>
       </div>

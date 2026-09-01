@@ -54,7 +54,7 @@ export default function Hero() {
               </div>
             </div>
 
-            <h1 className="font-display text-[1.75rem] xs:text-3xl sm:text-4xl lg:text-[2.65rem] xl:text-[3.1rem] font-normal leading-[1.14] tracking-tight text-[#F3F4F6]">
+            <h1 className="font-display text-2xl xs:text-3xl sm:text-4xl lg:text-[2.5rem] font-normal leading-[1.12] tracking-tight text-[#F3F4F6]">
               Photorealistic <span className="italic text-[#D49A6A]">3D Renders</span> & Practical <span className="italic text-[#D49A6A]">2D Floor Plans</span>
             </h1>
 

@@ -37,9 +37,9 @@ export default function PortfolioGrid({
   }, [activeFilter, sourceProjects]);
 
   return (
-    <section className="pb-20 md:pb-28">
-      <div className="mx-auto max-w-[1440px] px-5 md:px-10">
-        <div className="mb-10 flex flex-col gap-6 border-y border-black/10 py-5 md:flex-row md:items-center md:justify-between">
+    <section className="pb-16 sm:pb-20 md:pb-24">
+      <div className="container-rituals">
+        <div className="mb-8 flex flex-col gap-5 border-y border-white/10 py-4 md:flex-row md:items-center md:justify-between">
           <p className="label-rituals">
             {filteredProjects.length} project
             {filteredProjects.length === 1 ? "" : "s"}
@@ -53,14 +53,14 @@ export default function PortfolioGrid({
         </div>
 
         {filteredProjects.length > 0 ? (
-          <div className="grid gap-x-8 gap-y-14 md:grid-cols-2 lg:grid-cols-3">
+          <div className="grid gap-6 sm:gap-8 md:grid-cols-2 lg:grid-cols-3">
             {filteredProjects.map((project) => (
               <PortfolioCard key={project.slug} project={project} />
             ))}
           </div>
         ) : (
-          <div className="border border-black/10 py-20 text-center">
-            <p className="font-display text-3xl">No projects in this category yet.</p>
+          <div className="border border-white/10 py-16 text-center rounded-2xl bg-[#1E2227]">
+            <p className="font-display text-xl text-[#F3F4F6]">No projects in this category yet.</p>
           </div>
         )}
       </div>

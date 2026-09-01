@@ -14,10 +14,10 @@ export const metadata = {
 
 export default function ExperiencePage() {
   return (
-    <main className="px-5 py-20 md:px-10 md:py-28">
-      <div className="mx-auto max-w-[1440px]">
+    <main className="py-14 sm:py-18 md:py-20 bg-[#14171A] text-[#F3F4F6]">
+      <div className="container-rituals">
         <ExperienceIntro />
-        <div className="mt-24 space-y-24 md:mt-32 md:space-y-32">
+        <div className="mt-12 space-y-12 sm:mt-16 sm:space-y-16">
           <ExperienceTimeline items={experience} />
           <ExperienceSkills skills={skillsList} />
           <ExperienceServices />
