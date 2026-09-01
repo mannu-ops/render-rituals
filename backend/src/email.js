@@ -24,23 +24,42 @@ function saveLocalLeadBackup(inquiry, status, reason = "") {
 }
 
 function getTransporter() {
-  const user = process.env.SMTP_USER;
-  const pass = process.env.SMTP_PASS;
+  const user = (process.env.SMTP_USER || "").trim();
+  const rawPass = (process.env.SMTP_PASS || "").trim();
+  const pass = rawPass.replace(/\s+/g, ""); // Auto-clean Google App Password spaces
 
   if (!user || !pass) {
     return null;
   }
 
   if (!transporter) {
-    transporter = nodemailer.createTransport({
-      host: process.env.SMTP_HOST || "smtp.gmail.com",
-      port: parseInt(process.env.SMTP_PORT || "587"),
-      secure: false, // true for 465, false for other ports
-      auth: {
-        user: user,
-        pass: pass,
-      },
-    });
+    const isGmail = (process.env.SMTP_HOST || "").includes("gmail") || user.endsWith("@gmail.com");
+
+    if (isGmail) {
+      transporter = nodemailer.createTransport({
+        service: "gmail",
+        auth: {
+          user: user,
+          pass: pass,
+        },
+        tls: {
+          rejectUnauthorized: false,
+        },
+      });
+    } else {
+      transporter = nodemailer.createTransport({
+        host: process.env.SMTP_HOST || "smtp.gmail.com",
+        port: parseInt(process.env.SMTP_PORT || "587"),
+        secure: process.env.SMTP_PORT === "465",
+        auth: {
+          user: user,
+          pass: pass,
+        },
+        tls: {
+          rejectUnauthorized: false,
+        },
+      });
+    }
   }
 
   return transporter;
