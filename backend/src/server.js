@@ -7,7 +7,6 @@ const cors = require("cors");
 const multer = require("multer");
 const cloudinary = require("cloudinary").v2;
 const { db, initDb, verifyPasscode, hashPasscode } = require("./db");
-const { sendLeadNotification } = require("./email");
 
 const app = express();
 const PORT = process.env.PORT || 5000;
@@ -217,17 +216,12 @@ app.get("/api/inquiries", async (req, res) => {
 
 app.post("/api/inquiries", async (req, res) => {
   try {
-    // 1. Save directly & permanently into Neon PostgreSQL & local JSON fallback
+    // Save directly & permanently into Neon PostgreSQL & local JSON fallback
     const newInquiry = await db.createInquiry(req.body);
 
     console.log(`\n🎉 New Lead Saved in Database: ${newInquiry.name} (${newInquiry.email}) - Service: ${newInquiry.service}`);
 
-    // 2. Background optional email dispatch (non-blocking, 0ms waiting time)
-    sendLeadNotification(newInquiry).catch((err) => {
-      console.log("ℹ️ Background email notification note:", err.message);
-    });
-
-    // 3. Instant 201 response to frontend client
+    // Instant 201 response to frontend client
     res.status(201).json({
       success: true,
       message: "Inquiry submitted and stored in studio dashboard successfully",
