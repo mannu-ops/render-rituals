@@ -41,6 +41,26 @@ export default function Footer() {
               <MapPin size={13} className="text-[#D49A6A] shrink-0" />
               <span>{settings.location || "Noida, Uttar Pradesh · Available Worldwide"}</span>
             </div>
+
+            {/* Live Studio Availability Beacon */}
+            <div
+              className={`mt-4 inline-flex items-center gap-2 rounded-full border px-3 py-1 text-xs font-medium ${settings.isAvailable !== false
+                ? "border-[#25D366]/30 bg-[#25D366]/10 text-[#25D366]"
+                : "border-[#EF4444]/30 bg-[#EF4444]/10 text-[#EF4444]"
+                }`}
+            >
+              <span className="relative flex h-2 w-2 shrink-0">
+                <span
+                  className={`absolute inline-flex h-full w-full animate-ping rounded-full opacity-75 ${settings.isAvailable !== false ? "bg-[#25D366]" : "bg-[#EF4444]"
+                    }`}
+                />
+                <span
+                  className={`relative inline-flex h-2 w-2 rounded-full ${settings.isAvailable !== false ? "bg-[#25D366]" : "bg-[#EF4444]"
+                    }`}
+                />
+              </span>
+              <span>{settings.statusText || (settings.isAvailable !== false ? "Taking New Projects (Available)" : "Fully Booked")}</span>
+            </div>
           </div>
 
           {/* Quick Navigation Directory (2 Columns) */}

@@ -336,24 +336,24 @@ export default function Navbar() {
 
             {/* RIGHT SIDE */}
             <div className="flex items-center gap-2 sm:gap-2.5 xl:gap-3 shrink-0">
-              {/* Live Status Beacon (Desktop) */}
+              {/* Live Status Beacon (Visible on Laptop, Desktop & Ultrawide) */}
               <div
-                className={`hidden 2xl:flex items-center gap-2 rounded-full border px-3 py-1.5 text-xs font-medium whitespace-nowrap transition-colors duration-300 ${settings.isAvailable
+                className={`hidden lg:flex items-center gap-2 rounded-full border px-3 py-1.5 text-xs font-medium whitespace-nowrap transition-colors duration-300 ${settings.isAvailable !== false
                   ? "border-[#25D366]/30 bg-[#25D366]/10 text-[#25D366]"
                   : "border-[#EF4444]/30 bg-[#EF4444]/10 text-[#EF4444]"
                   }`}
               >
-                <span className="relative flex h-2 w-2">
+                <span className="relative flex h-2 w-2 shrink-0">
                   <span
-                    className={`absolute inline-flex h-full w-full animate-ping rounded-full opacity-75 ${settings.isAvailable ? "bg-[#25D366]" : "bg-[#EF4444]"
+                    className={`absolute inline-flex h-full w-full animate-ping rounded-full opacity-75 ${settings.isAvailable !== false ? "bg-[#25D366]" : "bg-[#EF4444]"
                       }`}
                   />
                   <span
-                    className={`relative inline-flex h-2 w-2 rounded-full ${settings.isAvailable ? "bg-[#25D366]" : "bg-[#EF4444]"
+                    className={`relative inline-flex h-2 w-2 rounded-full ${settings.isAvailable !== false ? "bg-[#25D366]" : "bg-[#EF4444]"
                       }`}
                   />
                 </span>
-                <span>{settings.statusText || (settings.isAvailable ? "Available for Projects" : "Fully Booked")}</span>
+                <span>{settings.statusText || (settings.isAvailable !== false ? "Available for Projects" : "Fully Booked")}</span>
               </div>
 
               {/* Desktop CTA */}
@@ -431,6 +431,29 @@ export default function Navbar() {
             >
               <X size={18} />
             </label>
+          </div>
+
+          {/* Live Studio Availability Beacon (Mobile) */}
+          <div
+            className={`mt-4 flex items-center justify-between rounded-2xl border px-3.5 py-2.5 text-xs font-medium transition-colors ${settings.isAvailable !== false
+              ? "border-[#25D366]/30 bg-[#25D366]/10 text-[#25D366]"
+              : "border-[#EF4444]/30 bg-[#EF4444]/10 text-[#EF4444]"
+              }`}
+          >
+            <div className="flex items-center gap-2">
+              <span className="relative flex h-2 w-2 shrink-0">
+                <span
+                  className={`absolute inline-flex h-full w-full animate-ping rounded-full opacity-75 ${settings.isAvailable !== false ? "bg-[#25D366]" : "bg-[#EF4444]"
+                    }`}
+                />
+                <span
+                  className={`relative inline-flex h-2 w-2 rounded-full ${settings.isAvailable !== false ? "bg-[#25D366]" : "bg-[#EF4444]"
+                    }`}
+                />
+              </span>
+              <span>{settings.statusText || (settings.isAvailable !== false ? "Taking New Projects (Available)" : "Fully Booked")}</span>
+            </div>
+            <span className="font-mono-spec text-[9px] uppercase tracking-wider text-white/40">Beacon</span>
           </div>
 
           {/* Navigation Directory */}
