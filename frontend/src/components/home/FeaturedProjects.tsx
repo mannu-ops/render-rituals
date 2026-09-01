@@ -72,11 +72,10 @@ export default function FeaturedProjects() {
           </div>
         </div>
 
-        {/* Asymmetrical Architectural Gallery Grid */}
-        <div className="mt-14 grid gap-8 md:grid-cols-2 lg:grid-cols-12">
+        {/* Balanced Architectural Gallery Grid */}
+        <div className="mt-10 sm:mt-12 grid gap-6 sm:gap-8 md:grid-cols-2">
           {filteredProjects.map((project, index) => {
-            const colSpan = index === 0 ? "lg:col-span-7" : index === 1 ? "lg:col-span-5" : index === 2 ? "lg:col-span-5" : "lg:col-span-7";
-            const aspectClass = index === 0 ? "aspect-[16/11]" : "aspect-[4/3]";
+            const aspectClass = "aspect-[16/10] max-h-[360px]";
             const rendersCount = project.renders3D?.length || (project.gallery?.length || 3);
             const plansCount = project.plans2D?.length || 2;
             const displayImage =
@@ -93,10 +92,10 @@ export default function FeaturedProjects() {
             return (
               <div
                 key={project.slug}
-                className={colSpan}
+                className="w-full max-w-[620px] mx-auto"
               >
                 <Link href={`/portfolio/${project.slug}`} className="group block">
-                  <div className={`relative ${aspectClass} overflow-hidden rounded-3xl border border-white/10 bg-[#1E2227] shadow-xl transition-all duration-700 group-hover:shadow-3xl group-hover:border-[#D49A6A]/50`}>
+                  <div className={`relative ${aspectClass} overflow-hidden rounded-2xl sm:rounded-3xl border border-white/10 bg-[#1E2227] shadow-xl transition-all duration-700 group-hover:shadow-3xl group-hover:border-[#D49A6A]/50`}>
                     <img
                       src={displayImage}
                       alt={project.title}

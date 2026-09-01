@@ -41,20 +41,20 @@ export default function ServicesPreview() {
             return (
               <div
                 key={service.id}
-                className="card-luxury flex flex-col justify-between rounded-3xl p-5 xs:p-6 sm:p-8 lg:p-10 border border-white/15 bg-[#1E2227] shadow-2xl transition-all duration-500 hover:border-[#D49A6A]/60"
+                className="card-luxury w-full max-w-[600px] mx-auto flex flex-col justify-between rounded-2xl sm:rounded-3xl p-5 sm:p-7 border border-white/15 bg-[#1E2227] shadow-xl transition-all duration-300 hover:border-[#D49A6A]/60"
               >
                 <div>
                   {/* Top Header & Tag */}
-                  <div className="flex items-center justify-between border-b border-white/10 pb-4 sm:pb-6">
+                  <div className="flex items-center justify-between border-b border-white/10 pb-4">
                     <div className="flex items-center gap-3">
-                      <div className="flex h-10 w-10 sm:h-12 sm:w-12 items-center justify-center rounded-2xl bg-[#D49A6A]/15 border border-[#D49A6A]/30 text-[#D49A6A] shrink-0">
-                        <Icon size={20} className="sm:w-[22px] sm:h-[22px]" />
+                      <div className="flex h-10 w-10 sm:h-11 sm:w-11 items-center justify-center rounded-xl bg-[#D49A6A]/15 border border-[#D49A6A]/30 text-[#D49A6A] shrink-0">
+                        <Icon size={18} className="sm:w-5 sm:h-5" />
                       </div>
                       <div>
-                        <span className="font-mono-spec text-[9px] sm:text-[10px] uppercase tracking-widest text-[#D49A6A]">
+                        <span className="font-mono-spec text-[9px] uppercase tracking-widest text-[#D49A6A]">
                           Service 0{index + 1}
                         </span>
-                        <h3 className="font-display text-xl xs:text-2xl sm:text-3xl font-medium text-[#F3F4F6] mt-0.5">
+                        <h3 className="font-display text-lg sm:text-xl font-semibold text-[#F3F4F6] mt-0.5">
                           {is3D ? "3D Visualization & Renders" : "2D Space Planning & Layouts"}
                         </h3>
                       </div>
@@ -63,7 +63,7 @@ export default function ServicesPreview() {
 
                   {/* Image Preview Banner with Floating Badges */}
                   {service.coverImage ? (
-                    <div className="relative mt-5 sm:mt-6 aspect-[16/9] sm:aspect-[16/8] overflow-hidden rounded-2xl border border-white/10 bg-[#14171A]">
+                    <div className="relative mt-4 aspect-[16/8] max-h-[220px] overflow-hidden rounded-xl sm:rounded-2xl border border-white/10 bg-[#14171A]">
                       <img
                         src={service.coverImage}
                         alt={service.title}

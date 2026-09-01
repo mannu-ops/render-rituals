@@ -260,18 +260,18 @@ export default function ProcessPreview() {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -15 }}
               transition={{ duration: 0.35, ease: "easeOut" }}
-              className="grid gap-8 lg:grid-cols-12 rounded-3xl border border-white/10 bg-[#181B1F] p-6 sm:p-8 lg:p-10 shadow-2xl relative overflow-hidden"
+              className="grid gap-8 lg:grid-cols-12 rounded-2xl sm:rounded-3xl border border-white/10 bg-[#181B1F] p-5 sm:p-7 lg:p-8 shadow-2xl relative overflow-hidden"
             >
               {/* Subtle Step Index Background Watermark */}
-              <span className="pointer-events-none absolute -bottom-10 -right-4 font-display text-[160px] sm:text-[220px] font-bold text-white/[0.02] select-none leading-none">
+              <span className="pointer-events-none absolute -bottom-10 -right-4 font-display text-[120px] sm:text-[180px] font-bold text-white/[0.02] select-none leading-none">
                 {currentStep.number}
               </span>
 
               {/* Left Column (7-cols): Narrative, Deliverables & Toolstack */}
-              <div className="lg:col-span-7 flex flex-col justify-between space-y-6">
+              <div className="lg:col-span-7 flex flex-col justify-between space-y-5">
                 <div>
                   {/* Top Step Meta Badge */}
-                  <div className="flex flex-wrap items-center gap-2 mb-4">
+                  <div className="flex flex-wrap items-center gap-2 mb-3">
                     <span className="rounded-full bg-[#D49A6A]/15 border border-[#D49A6A]/30 px-3 py-1 font-mono-spec text-[9.5px] uppercase tracking-widest text-[#D49A6A] font-semibold">
                       {currentStep.phase}
                     </span>
@@ -284,48 +284,46 @@ export default function ProcessPreview() {
                   </div>
 
                   {/* Title & Subtitle */}
-                  <h3 className="font-display text-2xl sm:text-3xl md:text-4xl font-normal text-[#F3F4F6] tracking-tight">
+                  <h3 className="font-display text-xl sm:text-2xl font-normal text-[#F3F4F6] tracking-tight">
                     {currentStep.title}
                   </h3>
-                  <p className="font-mono-spec text-xs text-[#D49A6A] mt-1.5 font-medium">
+                  <p className="font-mono-spec text-xs text-[#D49A6A] mt-1 font-medium">
                     {currentStep.subtitle}
                   </p>
 
                   {/* Narrative Body */}
-                  <p className="mt-4 sm:mt-5 text-sm sm:text-base leading-relaxed text-[#D1D5DB]">
+                  <p className="mt-3.5 text-xs sm:text-sm leading-relaxed text-[#D1D5DB]">
                     {currentStep.narrative}
                   </p>
                 </div>
 
                 {/* Deliverables Checklist (2-Column Grid) */}
-                <div className="border-t border-white/10 pt-6">
-                  <span className="font-mono-spec text-[10px] uppercase tracking-widest text-[#8E98A5] block mb-3.5">
+                <div className="border-t border-white/10 pt-4">
+                  <span className="font-mono-spec text-[9.5px] uppercase tracking-widest text-[#8E98A5] block mb-2.5">
                     Stage Deliverables & Inclusions:
                   </span>
-                  <div className="grid gap-2.5 sm:grid-cols-2">
+                  <div className="grid gap-2 sm:grid-cols-2">
                     {currentStep.deliverables.map((item, dIdx) => (
                       <div
                         key={dIdx}
-                        className="flex items-start gap-2.5 rounded-xl border border-white/5 bg-[#14171A]/80 p-3"
+                        className="flex items-start gap-2 rounded-xl border border-white/5 bg-[#14171A]/80 p-2.5 text-xs"
                       >
-                        <CheckCircle2 size={15} className="text-[#D49A6A] shrink-0 mt-0.5" />
-                        <span className="text-xs text-[#F3F4F6] font-medium leading-tight">
-                          {item}
-                        </span>
+                        <CheckCircle2 size={13} className="text-[#D49A6A] shrink-0 mt-0.5" />
+                        <span className="text-[#D1D5DB] leading-snug">{item}</span>
                       </div>
                     ))}
                   </div>
                 </div>
 
                 {/* Software Toolstack Pills */}
-                <div className="flex flex-wrap items-center gap-2 pt-2">
+                <div className="flex flex-wrap items-center gap-1.5 pt-1">
                   <span className="font-mono-spec text-[9px] uppercase tracking-wider text-[#8E98A5] mr-1">
                     Tools Used:
                   </span>
                   {currentStep.toolstack.map((tool, tIdx) => (
                     <span
                       key={tIdx}
-                      className="rounded-lg border border-white/10 bg-[#14171A] px-2.5 py-1 font-mono-spec text-[9.5px] text-[#D1D5DB]"
+                      className="rounded-lg border border-white/10 bg-[#14171A] px-2.5 py-1 font-mono-spec text-[9px] text-[#D1D5DB]"
                     >
                       {tool}
                     </span>
@@ -335,7 +333,7 @@ export default function ProcessPreview() {
 
               {/* Right Column (5-cols): Visual Render Presentation */}
               <div className="lg:col-span-5 flex flex-col justify-center">
-                <div className="group relative aspect-[4/3] sm:aspect-[16/11] lg:aspect-square overflow-hidden rounded-2xl border border-white/15 bg-[#14171A] shadow-2xl">
+                <div className="group relative aspect-[4/3] sm:aspect-[16/11] lg:aspect-[4/3] max-h-[320px] overflow-hidden rounded-2xl border border-white/15 bg-[#14171A] shadow-2xl">
                   <img
                     src={currentStep.image}
                     alt={currentStep.title}

@@ -42,30 +42,30 @@ export default function TestimonialsPreview() {
           {testimonials.map((item, idx) => (
             <figure
               key={item.id || `${item.name}-${idx}`}
-              className="card-luxury flex flex-col justify-between rounded-2xl sm:rounded-3xl p-6 sm:p-8 transition-all duration-500 hover:shadow-3xl hover:border-[#D49A6A]/50"
+              className="card-luxury w-full max-w-[400px] mx-auto flex flex-col justify-between rounded-2xl p-5 sm:p-6 transition-all duration-300 hover:shadow-2xl hover:border-[#D49A6A]/50"
             >
               <div>
-                <div className="flex items-center justify-between border-b border-white/10 pb-4">
-                  <span className="rounded-full bg-[#252A30] border border-white/10 px-3 py-1 font-mono-spec text-[8px] sm:text-[9px] uppercase tracking-wider text-[#D49A6A] font-medium">
+                <div className="flex items-center justify-between border-b border-white/10 pb-3">
+                  <span className="rounded-full bg-[#252A30] border border-white/10 px-2.5 py-0.5 font-mono-spec text-[8.5px] uppercase tracking-wider text-[#D49A6A] font-medium">
                     {item.scope}
                   </span>
-                  <Quote size={18} className="text-[#D49A6A]/70 sm:w-5 sm:h-5" />
+                  <Quote size={16} className="text-[#D49A6A]/70" />
                 </div>
 
-                <blockquote className="font-display mt-6 sm:mt-7 text-lg sm:text-xl font-normal leading-relaxed text-[#F3F4F6]">
+                <blockquote className="font-display mt-4 text-sm sm:text-base font-normal leading-relaxed text-[#F3F4F6]">
                   “{item.quote}”
                 </blockquote>
               </div>
 
-              <figcaption className="mt-6 sm:mt-8 flex items-center gap-3 sm:gap-3.5 border-t border-white/10 pt-4 sm:pt-5">
-                <div className="flex h-10 w-10 sm:h-11 sm:w-11 items-center justify-center rounded-2xl bg-[#D49A6A] text-xs sm:text-sm font-bold text-[#14171A] shadow-md">
+              <figcaption className="mt-5 flex items-center gap-3 border-t border-white/10 pt-3.5">
+                <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-[#D49A6A] text-xs font-bold text-[#14171A] shadow-md">
                   {item.name.charAt(0)}
                 </div>
                 <div>
-                  <p className="font-medium text-sm text-[#F3F4F6] leading-none">
+                  <p className="font-medium text-xs sm:text-sm text-[#F3F4F6] leading-none">
                     {item.name}
                   </p>
-                  <p className="mt-1 font-mono-spec text-[9px] sm:text-[10px] uppercase tracking-wider text-[#8E98A5]">
+                  <p className="mt-1 font-mono-spec text-[9px] uppercase tracking-wider text-[#8E98A5]">
                     {item.role} · {item.location}
                   </p>
                 </div>

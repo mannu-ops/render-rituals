@@ -140,7 +140,7 @@ export default function StudioIntro() {
         </div>
 
         {/* 4 Freelance Value Pillar Cards */}
-        <div className="mt-12 sm:mt-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-10 sm:mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
           {freelanceStrengths.map((pillar, idx) => {
             const Icon = pillar.icon;
             const isHighlighted = activeRitual === idx;
@@ -149,29 +149,29 @@ export default function StudioIntro() {
               <div
                 key={pillar.title}
                 onMouseEnter={() => setActiveRitual(idx)}
-                className={`card-luxury-dark group relative flex flex-col justify-between rounded-2xl sm:rounded-3xl p-6 sm:p-8 transition-all duration-500 cursor-pointer ${isHighlighted ? "border-[#D49A6A]/60 shadow-2xl bg-[#1A1D22]" : "hover:border-white/20"
+                className={`card-luxury-dark group relative flex flex-col justify-between rounded-2xl p-5 sm:p-6 transition-all duration-300 cursor-pointer ${isHighlighted ? "border-[#D49A6A]/60 shadow-2xl bg-[#1A1D22]" : "hover:border-white/20"
                   }`}
               >
                 <div>
                   <div className="flex items-center justify-between">
-                    <span className={`flex h-11 w-11 sm:h-12 sm:w-12 items-center justify-center rounded-2xl transition-all duration-300 shadow-inner ${isHighlighted ? "bg-[#D49A6A] text-[#14171A]" : "bg-white/5 text-[#D49A6A] group-hover:bg-[#D49A6A] group-hover:text-[#14171A]"
+                    <span className={`flex h-10 w-10 sm:h-11 sm:w-11 items-center justify-center rounded-xl transition-all duration-300 shadow-inner ${isHighlighted ? "bg-[#D49A6A] text-[#14171A]" : "bg-white/5 text-[#D49A6A] group-hover:bg-[#D49A6A] group-hover:text-[#14171A]"
                       }`}>
-                      <Icon size={20} className="sm:w-[22px] sm:h-[22px]" />
+                      <Icon size={18} className="sm:w-5 sm:h-5" />
                     </span>
-                    <span className="font-mono-spec text-[10px] sm:text-[11px] text-white/30">
+                    <span className="font-mono-spec text-[10px] text-white/30">
                       /{pillar.number}
                     </span>
                   </div>
 
-                  <h3 className="font-display mt-6 sm:mt-7 text-xl sm:text-2xl font-medium tracking-wide text-[#F3F4F6]">
+                  <h3 className="font-display mt-4 sm:mt-5 text-base sm:text-lg font-semibold tracking-normal text-[#F3F4F6]">
                     {pillar.title}
                   </h3>
 
-                  <p className="mt-1 font-mono-spec text-[9px] sm:text-[10px] uppercase tracking-wider text-[#D49A6A]">
+                  <p className="mt-1 font-mono-spec text-[9px] uppercase tracking-wider text-[#D49A6A]">
                     {pillar.subtitle}
                   </p>
 
-                  <p className="mt-3 text-xs leading-relaxed text-[#8E98A5]">
+                  <p className="mt-2.5 text-xs leading-relaxed text-[#8E98A5]">
                     {pillar.desc}
                   </p>
 

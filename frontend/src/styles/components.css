@@ -88,11 +88,12 @@
   box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.4);
 }
 
-/* Luxury Cards */
+/* Luxury Cards with Strict Max Bounds & Compact Scaling */
 .card-luxury {
   background: #1E2227;
   border: 1px solid rgba(255, 255, 255, 0.08);
   color: #F3F4F6;
+  max-width: 100%;
   transition: all 350ms cubic-bezier(0.16, 1, 0.3, 1);
 }
 
@@ -107,6 +108,7 @@
   background: #16181B;
   border: 1px solid rgba(255, 255, 255, 0.08);
   color: #F3F4F6;
+  max-width: 100%;
   transition: all 350ms cubic-bezier(0.16, 1, 0.3, 1);
 }
 
@@ -114,6 +116,26 @@
   border-color: rgba(212, 154, 106, 0.4);
   transform: translateY(-3px);
   box-shadow: 0 16px 36px -8px rgba(0, 0, 0, 0.6);
+}
+
+/* Card Internal Typography & Image Max Sizing Ceilings */
+.card-luxury h3,
+.card-luxury-dark h3 {
+  max-width: 100%;
+}
+
+.card-luxury img,
+.card-luxury-dark img {
+  max-width: 100%;
+}
+
+@media (min-width: 1024px) {
+  /* Prevent cards inside grids from stretching to gargantuan heights on wide desktop/ultrawide */
+  .grid-cards-constrained > * {
+    max-width: 580px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 /* Ambient Glow */
