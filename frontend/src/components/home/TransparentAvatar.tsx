@@ -77,13 +77,13 @@ export default function TransparentAvatar() {
         transition={{
           y: { duration: 4, repeat: Infinity, ease: "easeInOut" }
         }}
-        className="relative z-10 flex flex-col items-center w-full min-h-[300px] sm:min-h-[360px] lg:min-h-[400px] justify-center"
+        className="relative z-10 flex flex-col items-center w-full min-h-[260px] xs:min-h-[300px] sm:min-h-[360px] lg:min-h-[400px] justify-center"
       >
         {/* The Cutout Canvas */}
         <div className="relative w-full flex justify-center">
           <canvas
             ref={canvasRef}
-            className={`h-auto w-full max-w-[240px] xs:max-w-[280px] sm:max-w-[340px] md:max-w-[380px] lg:max-w-[420px] drop-shadow-[0_20px_45px_rgba(0,0,0,0.85)] transition-opacity duration-300 ${
+            className={`h-auto w-full max-w-[210px] xs:max-w-[250px] sm:max-w-[320px] md:max-w-[360px] lg:max-w-[400px] drop-shadow-[0_20px_45px_rgba(0,0,0,0.85)] transition-opacity duration-300 ${
               loaded ? "opacity-100" : "opacity-0"
             }`}
             style={{ imageRendering: "auto" }}
@@ -95,10 +95,10 @@ export default function TransparentAvatar() {
           initial={{ scale: 0.8, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
           transition={{ delay: 0.3, duration: 0.5 }}
-          className="absolute -top-3 left-1 sm:-top-4 sm:left-4 flex items-center gap-1.5 sm:gap-2 rounded-full border border-white/20 bg-[#1E2227]/95 px-3 py-1.5 sm:px-4 sm:py-2 backdrop-blur-xl shadow-2xl hover:border-[#D49A6A]/50 transition-colors"
+          className="absolute -top-2 left-2 sm:-top-4 sm:left-4 flex items-center gap-1.5 sm:gap-2 rounded-full border border-white/20 bg-[#1E2227]/95 px-2.5 py-1 sm:px-4 sm:py-2 backdrop-blur-xl shadow-2xl hover:border-[#D49A6A]/50 transition-colors"
         >
-          <span className="text-sm sm:text-base animate-bounce">👋</span>
-          <span className="font-mono-spec text-[9px] sm:text-[11px] uppercase tracking-wider text-[#F3F4F6]">
+          <span className="text-xs sm:text-base animate-bounce">👋</span>
+          <span className="font-mono-spec text-[8.5px] sm:text-[11px] uppercase tracking-wider text-[#F3F4F6]">
             Hi! I&apos;m <span className="text-[#D49A6A] font-semibold">Nikita</span>
           </span>
         </motion.div>
@@ -108,11 +108,11 @@ export default function TransparentAvatar() {
           initial={{ x: 20, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
           transition={{ delay: 0.45, duration: 0.5 }}
-          className="absolute top-[20%] right-0 sm:-right-4 flex items-center gap-1.5 sm:gap-2 rounded-full border border-[#D49A6A]/50 bg-[#1E2227]/95 px-2.5 py-1 sm:px-4 sm:py-2 backdrop-blur-xl shadow-2xl hover:scale-105 transition-all"
+          className="absolute top-[20%] right-1 sm:-right-4 flex items-center gap-1.5 sm:gap-2 rounded-full border border-[#D49A6A]/50 bg-[#1E2227]/95 px-2 py-1 sm:px-4 sm:py-2 backdrop-blur-xl shadow-2xl hover:scale-105 transition-all"
         >
-          <span className="flex h-2 w-2 rounded-full bg-[#D49A6A] animate-pulse" />
-          <span className="font-mono-spec text-[8.5px] sm:text-[10.5px] text-[#F3F4F6]">
-            4K Photorealistic CGI
+          <span className="flex h-1.5 w-1.5 sm:h-2 sm:w-2 rounded-full bg-[#D49A6A] animate-pulse" />
+          <span className="font-mono-spec text-[8px] sm:text-[10.5px] text-[#F3F4F6]">
+            4K CGI
           </span>
         </motion.div>
 
@@ -121,11 +121,11 @@ export default function TransparentAvatar() {
           initial={{ x: -20, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
           transition={{ delay: 0.6, duration: 0.5 }}
-          className="absolute bottom-[22%] -left-1 sm:-left-6 flex items-center gap-1.5 sm:gap-2 rounded-full border border-white/20 bg-[#14171A]/95 px-2.5 py-1 sm:px-4 sm:py-2 backdrop-blur-xl shadow-2xl hover:scale-105 transition-all"
+          className="absolute bottom-[18%] left-1 sm:-left-6 flex items-center gap-1.5 sm:gap-2 rounded-full border border-white/20 bg-[#14171A]/95 px-2 py-1 sm:px-4 sm:py-2 backdrop-blur-xl shadow-2xl hover:scale-105 transition-all"
         >
-          <Layers size={13} className="text-[#D49A6A]" />
-          <span className="font-mono-spec text-[8.5px] sm:text-[10.5px] text-[#F3F4F6]">
-            2D Architectural Layouts
+          <Layers size={11} className="text-[#D49A6A] sm:w-[13px] sm:h-[13px]" />
+          <span className="font-mono-spec text-[8px] sm:text-[10.5px] text-[#F3F4F6]">
+            2D CAD Plans
           </span>
         </motion.div>
 
@@ -134,20 +134,20 @@ export default function TransparentAvatar() {
           initial={{ y: 20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ delay: 0.75, duration: 0.5 }}
-          className="absolute -bottom-3 sm:-bottom-5 flex items-center justify-between gap-3 sm:gap-4 rounded-full border border-white/20 bg-[#1E2227]/95 px-4 py-2 sm:px-5 sm:py-2.5 backdrop-blur-2xl shadow-2xl"
+          className="absolute -bottom-2.5 sm:-bottom-5 flex items-center justify-between gap-2.5 sm:gap-4 rounded-full border border-white/20 bg-[#1E2227]/95 px-3 py-1.5 sm:px-5 sm:py-2.5 backdrop-blur-2xl shadow-2xl max-w-[95%] sm:max-w-none"
         >
           <div className="flex items-center gap-2 sm:gap-2.5">
             <span className="relative flex h-2 w-2 sm:h-2.5 sm:w-2.5">
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#25D366] opacity-75" />
               <span className="relative inline-flex rounded-full h-2 w-2 sm:h-2.5 sm:w-2.5 bg-[#25D366]" />
             </span>
-            <span className="font-mono-spec text-[8.5px] sm:text-[10px] uppercase tracking-wider text-[#F3F4F6] truncate">
-              Open for Freelance Work
+            <span className="font-mono-spec text-[8px] sm:text-[10px] uppercase tracking-wider text-[#F3F4F6] truncate">
+              Open for Work
             </span>
           </div>
           <SmoothScrollLink
             href="#contact"
-            className="group shrink-0 flex items-center gap-1 font-mono-spec text-[8.5px] sm:text-[10px] uppercase tracking-wider text-[#D49A6A] font-semibold hover:text-[#E5A97C] transition-colors cursor-pointer"
+            className="group shrink-0 flex items-center gap-1 font-mono-spec text-[8px] sm:text-[10px] uppercase tracking-wider text-[#D49A6A] font-semibold hover:text-[#E5A97C] transition-colors cursor-pointer"
           >
             <span>Hire Nikita</span>
             <span className="transition-transform group-hover:translate-x-1">→</span>

@@ -38,9 +38,9 @@ export default function Hero() {
 
       <div className="container-rituals flex-1 flex flex-col justify-center my-auto w-full">
         {/* Main Hero Split Grid */}
-        <div className="grid gap-6 lg:gap-8 py-1 lg:grid-cols-[1.1fr_.9fr] lg:items-center my-auto">
+        <div className="grid gap-6 lg:gap-8 py-2 lg:grid-cols-[1.1fr_.9fr] lg:items-center my-auto">
           {/* Left Column: Editorial Headline & Actions */}
-          <div className="flex flex-col justify-center">
+          <div className="flex flex-col justify-center text-center lg:text-left items-center lg:items-start">
             <div className="mb-2.5 sm:mb-3 flex items-center gap-3">
               <div className="flex items-center gap-2 rounded-full border border-white/15 bg-[#1E2227]/90 pl-1.5 pr-3.5 py-1 backdrop-blur-md">
                 <img
@@ -48,22 +48,27 @@ export default function Hero() {
                   alt="Nikita Render Rituals"
                   className="h-5 w-5 rounded-full object-cover border border-[#D49A6A]"
                 />
-                <span className="font-mono-spec text-[9px] uppercase tracking-wider text-[#F3F4F6]">
+                <span className="font-mono-spec text-[9px] sm:text-[10px] uppercase tracking-wider text-[#F3F4F6]">
                   Render Rituals · <span className="text-[#D49A6A]">3D & 2D Specialist</span>
                 </span>
               </div>
             </div>
 
-            <h1 className="font-display text-2xl xs:text-3xl sm:text-4xl lg:text-[2.65rem] xl:text-[3.1rem] font-normal leading-[1.12] tracking-tight text-[#F3F4F6]">
+            <h1 className="font-display text-[1.75rem] xs:text-3xl sm:text-4xl lg:text-[2.65rem] xl:text-[3.1rem] font-normal leading-[1.14] tracking-tight text-[#F3F4F6]">
               Photorealistic <span className="italic text-[#D49A6A]">3D Renders</span> & Practical <span className="italic text-[#D49A6A]">2D Floor Plans</span>
             </h1>
 
-            <p className="mt-2.5 sm:mt-3 max-w-xl text-xs sm:text-sm lg:text-[15px] leading-relaxed text-[#8E98A5]">
+            {/* Mobile Only: Compact 3D Avatar Showcase */}
+            <div className="my-4 w-full flex justify-center lg:hidden">
+              <TransparentAvatar />
+            </div>
+
+            <p className="mt-2 sm:mt-3 max-w-xl text-xs sm:text-sm lg:text-[15px] leading-relaxed text-[#8E98A5]">
               Render Rituals specializes in two core crafts: creating photorealistic 4K 3D renders so you can experience your space before it&apos;s built, and drafting clean 2D floor layouts ready for contractor execution.
             </p>
 
             {/* 2 Core Services Focus Pills */}
-            <div className="mt-3 sm:mt-4 flex flex-wrap gap-2">
+            <div className="mt-3 sm:mt-4 flex flex-wrap justify-center lg:justify-start gap-2">
               <div className="flex items-center gap-1.5 rounded-full border border-[#D49A6A]/30 bg-[#D49A6A]/10 px-3 py-1.5 text-[10.5px] sm:text-xs text-[#D49A6A] font-medium">
                 <Eye size={12} className="shrink-0" />
                 <span>1. 3D Visualization & 4K Renders</span>
@@ -75,10 +80,10 @@ export default function Hero() {
             </div>
 
             {/* Action Buttons */}
-            <div className="mt-4 sm:mt-5 flex flex-col sm:flex-row sm:items-center gap-3">
+            <div className="mt-4 sm:mt-5 flex flex-col sm:flex-row items-center gap-3 w-full sm:w-auto">
               <SmoothScrollLink
                 href="#work"
-                className="group inline-flex w-full sm:w-auto items-center justify-center gap-2.5 rounded-full bg-[#D49A6A] px-5 py-3 sm:px-7 sm:py-3.5 text-xs font-semibold uppercase tracking-wider text-[#14171A] shadow-md transition-all duration-300 hover:bg-[#E5A97C] hover:shadow-[0_8px_25px_rgba(212,154,106,0.35)] active:scale-[0.98] cursor-pointer"
+                className="group inline-flex w-full sm:w-auto items-center justify-center gap-2.5 rounded-full bg-[#D49A6A] px-6 py-3.5 sm:px-7 sm:py-3.5 text-xs font-semibold uppercase tracking-wider text-[#14171A] shadow-md transition-all duration-300 hover:bg-[#E5A97C] hover:shadow-[0_8px_25px_rgba(212,154,106,0.35)] active:scale-[0.98] cursor-pointer"
               >
                 <span>View My Portfolio</span>
                 <ArrowUpRight
@@ -88,14 +93,14 @@ export default function Hero() {
               </SmoothScrollLink>
               <SmoothScrollLink
                 href="#contact"
-                className="group inline-flex w-full sm:w-auto items-center justify-center gap-2.5 rounded-full border border-white/15 bg-[#1E2227] px-5 py-3 sm:px-6 sm:py-3.5 text-xs font-medium uppercase tracking-wider text-[#F3F4F6] backdrop-blur-md transition-all duration-300 hover:border-[#D49A6A] hover:bg-white/10 active:scale-[0.98] cursor-pointer"
+                className="group inline-flex w-full sm:w-auto items-center justify-center gap-2.5 rounded-full border border-white/15 bg-[#1E2227] px-6 py-3.5 sm:px-6 sm:py-3.5 text-xs font-medium uppercase tracking-wider text-[#F3F4F6] backdrop-blur-md transition-all duration-300 hover:border-[#D49A6A] hover:bg-white/10 active:scale-[0.98] cursor-pointer"
               >
                 <span>Hire Me for a Project</span>
               </SmoothScrollLink>
             </div>
 
             {/* Micro Stats Row */}
-            <div className="mt-4 sm:mt-5 grid grid-cols-3 gap-2 sm:gap-3 border-t border-white/10 pt-3 sm:pt-4">
+            <div className="mt-5 sm:mt-6 grid grid-cols-3 gap-2 sm:gap-3 border-t border-white/10 pt-3.5 sm:pt-4 w-full text-left">
               <div>
                 <p className="font-display text-lg xs:text-xl sm:text-2xl font-semibold text-[#F3F4F6]">{stat1.value}</p>
                 <p className="font-mono-spec text-[8px] xs:text-[9px] sm:text-[10px] uppercase tracking-wider text-[#D1D5DB] mt-0.5 font-medium leading-tight">{stat1.label}</p>
@@ -111,7 +116,7 @@ export default function Hero() {
             </div>
           </div>
 
-          {/* Right Column: Floating 3D Character */}
+          {/* Right Column: Floating 3D Character (Desktop) */}
           <div className="relative lg:pl-4 hidden lg:block">
             <TransparentAvatar />
           </div>
