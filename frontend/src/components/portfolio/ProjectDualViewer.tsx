@@ -81,31 +81,31 @@ export default function ProjectDualViewer({ project }: ProjectDualViewerProps) {
         </div>
 
         {/* Dual Mode Switcher */}
-        <div className="flex items-center rounded-full border border-white/15 bg-[#1E2227] p-1.5 shadow-xl">
+        <div className="inline-flex items-center rounded-full border border-white/15 bg-[#1E2227] p-1 sm:p-1.5 shadow-xl w-full sm:w-auto justify-center">
           <button
             type="button"
             onClick={() => setActiveTab("3d")}
-            className={`flex items-center gap-2 rounded-full px-5 py-2.5 text-xs font-semibold uppercase tracking-wider transition-all cursor-pointer ${
+            className={`flex items-center justify-center gap-1.5 sm:gap-2 rounded-full px-3.5 sm:px-5 py-2 sm:py-2.5 text-[10.5px] sm:text-xs font-semibold uppercase tracking-wider transition-all cursor-pointer whitespace-nowrap shrink-0 flex-1 sm:flex-initial ${
               activeTab === "3d"
                 ? "bg-[#D49A6A] text-[#14171A] shadow-md shadow-[#D49A6A]/20"
                 : "text-[#8E98A5] hover:text-[#F3F4F6]"
             }`}
           >
-            <Eye size={14} className={activeTab === "3d" ? "text-[#14171A]" : "text-[#D49A6A]"} />
-            <span>3D CGI Renders ({renders3D.length})</span>
+            <Eye size={13} className={`shrink-0 ${activeTab === "3d" ? "text-[#14171A]" : "text-[#D49A6A]"}`} />
+            <span className="whitespace-nowrap">3D CGI Renders ({renders3D.length})</span>
           </button>
 
           <button
             type="button"
             onClick={() => setActiveTab("2d")}
-            className={`flex items-center gap-2 rounded-full px-5 py-2.5 text-xs font-semibold uppercase tracking-wider transition-all cursor-pointer ${
+            className={`flex items-center justify-center gap-1.5 sm:gap-2 rounded-full px-3.5 sm:px-5 py-2 sm:py-2.5 text-[10.5px] sm:text-xs font-semibold uppercase tracking-wider transition-all cursor-pointer whitespace-nowrap shrink-0 flex-1 sm:flex-initial ${
               activeTab === "2d"
                 ? "bg-[#D49A6A] text-[#14171A] shadow-md shadow-[#D49A6A]/20"
                 : "text-[#8E98A5] hover:text-[#F3F4F6]"
             }`}
           >
-            <Layers size={14} className={activeTab === "2d" ? "text-[#14171A]" : "text-[#D49A6A]"} />
-            <span>2D CAD Plans ({plans2D.length})</span>
+            <Layers size={13} className={`shrink-0 ${activeTab === "2d" ? "text-[#14171A]" : "text-[#D49A6A]"}`} />
+            <span className="whitespace-nowrap">2D CAD Plans ({plans2D.length})</span>
           </button>
         </div>
       </div>
