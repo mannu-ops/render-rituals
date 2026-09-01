@@ -31,7 +31,7 @@ export default function Hero() {
   const stat3 = stats?.[2] || { value: "3-5 Days", label: "Fast Turnaround" };
 
   return (
-    <section id="hero" className="relative w-full min-h-screen min-h-[100dvh] flex flex-col justify-center pt-24 pb-6 sm:pt-28 sm:pb-8 bg-[#14171A]">
+    <section id="hero" className="relative w-full min-h-[auto] lg:min-h-[85vh] lg:max-h-[920px] flex flex-col justify-center pt-24 pb-8 sm:pt-28 sm:pb-10 lg:pt-32 lg:pb-12 bg-[#14171A]">
       {/* Warm Amber & Slate Ambient Glows */}
       <div className="pointer-events-none absolute -top-40 right-10 h-[500px] w-[500px] rounded-full bg-[#D49A6A]/12 blur-[120px]" />
       <div className="pointer-events-none absolute top-1/2 -left-40 h-[450px] w-[450px] rounded-full bg-[#8E98A5]/10 blur-[100px]" />
@@ -54,7 +54,7 @@ export default function Hero() {
               </div>
             </div>
 
-            <h1 className="font-display text-[1.85rem] xs:text-[2.25rem] sm:text-4xl md:text-5xl lg:text-6xl xl:text-[4.25rem] font-normal leading-[1.08] tracking-tight text-[#F3F4F6]">
+            <h1 className="font-display text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-[3.25rem] xl:text-[3.65rem] font-normal leading-[1.1] tracking-tight text-[#F3F4F6]">
               Photorealistic <span className="italic text-[#D49A6A]">3D Renders</span> & Practical <span className="italic text-[#D49A6A]">2D Floor Plans</span>
             </h1>
 

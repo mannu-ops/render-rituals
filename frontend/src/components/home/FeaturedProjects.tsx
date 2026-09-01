@@ -39,7 +39,7 @@ export default function FeaturedProjects() {
           .slice(0, 4);
 
   return (
-    <section id="work" className="relative w-full min-h-screen min-h-[100dvh] flex flex-col justify-center py-16 sm:py-20 lg:py-28 bg-[#14171A] border-t border-white/10">
+    <section id="work" className="relative w-full py-16 sm:py-20 lg:py-24 bg-[#14171A] border-t border-white/10">
       <div className="container-rituals">
         {/* Section Header */}
         <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between border-b border-white/10 pb-6 sm:pb-8">
@@ -48,7 +48,7 @@ export default function FeaturedProjects() {
               <span className="h-1.5 w-1.5 rounded-full bg-[#D49A6A]" />
               <span className="label-rituals text-[#D49A6A]">Freelance Portfolio</span>
             </div>
-            <h2 className="font-display text-4xl font-normal tracking-tight text-[#F3F4F6] sm:text-5xl md:text-6xl lg:text-7xl">
+            <h2 className="font-display text-2xl xs:text-3xl sm:text-4xl md:text-5xl font-normal tracking-tight text-[#F3F4F6]">
               Selected 3D & <span className="italic text-[#D49A6A]">2D Works</span>
             </h2>
           </div>

@@ -9,7 +9,7 @@ export default function ServicesPreview() {
   const visibleServices = services.filter((s) => s.published !== false);
 
   return (
-    <section id="services" className="relative w-full min-h-screen min-h-[100dvh] flex flex-col justify-center py-16 sm:py-20 lg:py-28 bg-[#181B1F] border-t border-white/10 text-[#F3F4F6]">
+    <section id="services" className="relative w-full py-16 sm:py-20 lg:py-24 bg-[#181B1F] border-t border-white/10 text-[#F3F4F6]">
       {/* Warm Ambient Glows */}
       <div className="pointer-events-none absolute -top-24 right-10 h-[450px] w-[450px] rounded-full bg-[#D49A6A]/10 blur-[130px]" />
       <div className="pointer-events-none absolute -bottom-24 left-10 h-[450px] w-[450px] rounded-full bg-[#8E98A5]/10 blur-[130px]" />
@@ -22,7 +22,7 @@ export default function ServicesPreview() {
               <span className="h-1.5 w-1.5 rounded-full bg-[#D49A6A]" />
               <span className="label-rituals text-[#D49A6A]">Freelance Craft</span>
             </div>
-            <h2 className="font-display text-3xl xs:text-4xl sm:text-5xl md:text-6xl font-normal tracking-tight text-[#F3F4F6]">
+            <h2 className="font-display text-2xl xs:text-3xl sm:text-4xl md:text-5xl font-normal tracking-tight text-[#F3F4F6]">
               What I <span className="italic text-[#D49A6A]">Specialize In</span>
             </h2>
           </div>

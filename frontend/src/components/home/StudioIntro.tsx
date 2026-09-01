@@ -47,7 +47,7 @@ export default function StudioIntro() {
   const [activeRitual, setActiveRitual] = useState<number>(0);
 
   return (
-    <section id="studio" className="relative w-full min-h-screen min-h-[100dvh] flex flex-col justify-center overflow-hidden bg-[#111315] py-16 sm:py-20 lg:py-28 text-[#F3F4F6] border-t border-white/10">
+    <section id="studio" className="relative w-full overflow-hidden bg-[#111315] py-16 sm:py-20 lg:py-24 text-[#F3F4F6] border-t border-white/10">
       {/* Warm Ambient Radial Glows */}
       <div className="pointer-events-none absolute -top-24 left-1/4 h-[500px] w-[500px] rounded-full bg-[#D49A6A]/12 blur-[140px]" />
       <div className="pointer-events-none absolute -bottom-24 right-1/4 h-[500px] w-[500px] rounded-full bg-[#8E98A5]/10 blur-[140px]" />

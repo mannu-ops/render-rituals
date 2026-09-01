@@ -13,7 +13,7 @@ const metrics = [
 export default function TestimonialsPreview() {
   const { testimonials } = useAdminData();
   return (
-    <section id="reviews" className="relative w-full min-h-screen min-h-[100dvh] flex flex-col justify-center py-16 sm:py-20 lg:py-28 bg-[#181B1F] border-t border-white/10">
+    <section id="reviews" className="relative w-full py-16 sm:py-20 lg:py-24 bg-[#181B1F] border-t border-white/10">
       <div className="container-rituals">
         {/* Header */}
         <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between border-b border-white/10 pb-6 sm:pb-8">
@@ -22,7 +22,7 @@ export default function TestimonialsPreview() {
               <span className="h-1.5 w-1.5 rounded-full bg-[#D49A6A]" />
               <span className="label-rituals text-[#D49A6A]">Client Endorsements</span>
             </div>
-            <h2 className="font-display text-3xl xs:text-4xl font-normal tracking-tight text-[#F3F4F6] sm:text-5xl md:text-6xl lg:text-7xl">
+            <h2 className="font-display text-2xl xs:text-3xl sm:text-4xl md:text-5xl font-normal tracking-tight text-[#F3F4F6]">
               Words From Our <span className="italic text-[#D49A6A]">Collaborators</span>
             </h2>
           </div>

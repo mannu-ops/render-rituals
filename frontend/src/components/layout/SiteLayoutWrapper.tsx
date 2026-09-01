@@ -18,11 +18,13 @@ export default function SiteLayoutWrapper({
   }
 
   return (
-    <div className="flex min-h-screen flex-col bg-[#14171A] text-[#F3F4F6] antialiased">
-      <Navbar />
-      <div className="flex-1">{children}</div>
-      <Footer />
-      <BackToTop />
+    <div className="min-h-screen bg-[#14171A] text-[#F3F4F6] antialiased selection:bg-[#D49A6A] selection:text-[#14171A]">
+      <div className="site-canvas-limit flex min-h-screen flex-col bg-[#14171A]">
+        <Navbar />
+        <div className="flex-1 w-full">{children}</div>
+        <Footer />
+        <BackToTop />
+      </div>
     </div>
   );
 }

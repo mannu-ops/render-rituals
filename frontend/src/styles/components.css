@@ -1,11 +1,42 @@
 /* =========================================================
-   COMPONENTS & UTILITIES
+   CONTAINER & VIEWPORT BOUNDS (Ultrawide & 4K Protection)
 ========================================================= */
 
-/* Container */
+/* Main Content Container: capped at 1440px standard */
 .container-rituals {
   width: 100%;
-  max-width: 1440px;
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+}
+
+@media (min-width: 640px) {
+  .container-rituals {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container-rituals {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+}
+
+@media (min-width: 1536px) {
+  .container-rituals {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+}
+
+/* Wide Container for Gallery/Grids (capped at 1600px) */
+.container-rituals-wide {
+  width: 100%;
+  max-width: 1600px;
   margin-left: auto;
   margin-right: auto;
   padding-left: 1.25rem;
@@ -13,17 +44,21 @@
 }
 
 @media (min-width: 768px) {
-  .container-rituals {
+  .container-rituals-wide {
     padding-left: 2.5rem;
     padding-right: 2.5rem;
   }
 }
 
-@media (min-width: 1280px) {
-  .container-rituals {
-    padding-left: 3.5rem;
-    padding-right: 3.5rem;
-  }
+/* Master Site Canvas Wrapper for 4K / Ultrawide Monitors (3440px / 5120px) */
+.site-canvas-limit {
+  width: 100%;
+  max-width: 1920px;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0 0 100px rgba(0, 0, 0, 0.6);
+  position: relative;
+  overflow-x: hidden;
 }
 
 /* Badges & Labels */

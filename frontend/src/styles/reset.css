@@ -48,7 +48,7 @@ section[id] {
   color: #14171A;
 }
 
-/* Typography Helpers */
+/* Typography Helpers with Fluid Clamping (Prevents Oversized Text on 4K/Ultrawide) */
 .font-display {
   font-family: var(--font-display), "Outfit", system-ui, sans-serif;
   letter-spacing: -0.02em;
@@ -58,12 +58,39 @@ section[id] {
   font-family: var(--font-mono), monospace;
 }
 
-h1, h2, h3, h4, h5, h6 {
+/* Fluid Heading Bounds: scales beautifully on phones and stops at professional caps on 4K */
+h1 {
+  font-size: clamp(2rem, 3.8vw, 3.65rem);
+  line-height: 1.08;
+  letter-spacing: -0.025em;
+  color: #F3F4F6;
+}
+
+h2 {
+  font-size: clamp(1.65rem, 2.8vw, 2.65rem);
+  line-height: 1.12;
+  letter-spacing: -0.02em;
+  color: #F3F4F6;
+}
+
+h3 {
+  font-size: clamp(1.2rem, 1.8vw, 1.6rem);
+  line-height: 1.25;
+  color: #F3F4F6;
+}
+
+h4, h5, h6 {
   color: #F3F4F6;
 }
 
 p, span, label, li {
   color: inherit;
+}
+
+/* Text Container Max-width for optimal reading ergonomics */
+.text-body-prose {
+  max-width: 65ch;
+  line-height: 1.68;
 }
 
 /* High Contrast Darkness Remaps */

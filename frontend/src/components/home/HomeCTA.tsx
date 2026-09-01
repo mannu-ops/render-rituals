@@ -72,7 +72,7 @@ export default function HomeCTA() {
   };
 
   return (
-    <section id="contact" className="relative w-full min-h-screen min-h-[100dvh] flex flex-col justify-center overflow-hidden bg-[#0F1113] py-16 sm:py-20 lg:py-28 text-[#F3F4F6] border-t border-white/10">
+    <section id="contact" className="relative w-full overflow-hidden bg-[#0F1113] py-16 sm:py-20 lg:py-24 text-[#F3F4F6] border-t border-white/10">
       {/* Ambient Lighting Flares */}
       <div className="pointer-events-none absolute -top-32 right-1/4 h-[500px] w-[500px] rounded-full bg-[#D49A6A]/15 blur-[140px]" />
       <div className="pointer-events-none absolute -bottom-32 left-1/4 h-[500px] w-[500px] rounded-full bg-[#8E98A5]/10 blur-[140px]" />
@@ -86,7 +86,7 @@ export default function HomeCTA() {
         <div className="grid gap-12 lg:grid-cols-[1.05fr_.95fr] lg:items-start">
           {/* Left Column: Heading & Direct Channels */}
           <div>
-            <h2 className="font-display text-3xl xs:text-4xl font-normal leading-[1.06] tracking-tight text-[#F3F4F6] sm:text-5xl md:text-6xl lg:text-7xl">
+            <h2 className="font-display text-2xl xs:text-3xl sm:text-4xl md:text-5xl font-normal leading-[1.08] tracking-tight text-[#F3F4F6]">
               Let&apos;s bring your <span className="italic text-[#D49A6A]">dream space</span> to life.
             </h2>
             <p className="mt-4 sm:mt-6 max-w-xl text-sm sm:text-base md:text-lg leading-relaxed text-[#8E98A5]">

@@ -112,7 +112,7 @@ export default function ProcessPreview() {
   return (
     <section
       id="process"
-      className="relative w-full min-h-screen min-h-[100dvh] flex flex-col justify-center py-20 sm:py-24 lg:py-32 bg-[#14171A] border-t border-white/10 overflow-hidden"
+      className="relative w-full py-16 sm:py-20 lg:py-24 bg-[#14171A] border-t border-white/10 overflow-hidden"
     >
       {/* Warm Ambient Backdrops */}
       <div className="pointer-events-none absolute top-1/4 -left-40 h-[600px] w-[600px] rounded-full bg-[#D49A6A]/10 blur-[160px]" />
@@ -134,7 +134,7 @@ export default function ProcessPreview() {
               </span>
             </div>
 
-            <h2 className="font-display text-3xl xs:text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-normal tracking-tight text-[#F3F4F6] leading-[1.04]">
+            <h2 className="font-display text-2xl xs:text-3xl sm:text-4xl md:text-5xl font-normal tracking-tight text-[#F3F4F6] leading-[1.08]">
               How We Work Together in{" "}
               <span className="italic text-[#D49A6A] font-serif font-light">
                 4 Simple Steps
