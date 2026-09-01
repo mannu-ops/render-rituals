@@ -12,7 +12,7 @@ export default function ServicesPage() {
     <main className="px-5 py-20 md:px-10 md:py-28 bg-[#14171A] text-[#F3F4F6]">
       <div className="mx-auto max-w-[1440px]">
         <p className="label-rituals">Services & Capabilities</p>
-        <h1 className="font-display mt-5 max-w-5xl text-6xl leading-[0.9] md:text-8xl text-[#F3F4F6]">
+        <h1 className="font-display mt-4 max-w-5xl text-3xl xs:text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-normal leading-[1.08] tracking-tight text-[#F3F4F6]">
           From first idea
           <br />
           to <span className="italic text-[#D49A6A]">final image</span>.
