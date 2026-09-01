@@ -1,6 +1,7 @@
 const nodemailer = require("nodemailer");
 const fs = require("fs");
 const path = require("path");
+require("dotenv").config({ path: path.join(__dirname, "..", ".env") });
 require("dotenv").config();
 
 let transporter = null;
@@ -29,40 +30,23 @@ function getTransporter() {
   const pass = rawPass.replace(/\s+/g, ""); // Auto-clean Google App Password spaces
 
   if (!user || !pass) {
+    console.warn("⚠️ SMTP Notice: SMTP_USER or SMTP_PASS is missing in environment variables.");
     return null;
   }
 
-  if (!transporter) {
-    const isGmail = (process.env.SMTP_HOST || "").includes("gmail") || user.endsWith("@gmail.com");
-
-    if (isGmail) {
-      transporter = nodemailer.createTransport({
-        service: "gmail",
-        auth: {
-          user: user,
-          pass: pass,
-        },
-        tls: {
-          rejectUnauthorized: false,
-        },
-      });
-    } else {
-      transporter = nodemailer.createTransport({
-        host: process.env.SMTP_HOST || "smtp.gmail.com",
-        port: parseInt(process.env.SMTP_PORT || "587"),
-        secure: process.env.SMTP_PORT === "465",
-        auth: {
-          user: user,
-          pass: pass,
-        },
-        tls: {
-          rejectUnauthorized: false,
-        },
-      });
-    }
-  }
-
-  return transporter;
+  // Direct SSL port 465 is the most reliable transport for Gmail
+  return nodemailer.createTransport({
+    host: process.env.SMTP_HOST || "smtp.gmail.com",
+    port: parseInt(process.env.SMTP_PORT || "465"),
+    secure: (process.env.SMTP_PORT || "465") === "465" || (process.env.SMTP_HOST || "").includes("gmail") || user.endsWith("@gmail.com"),
+    auth: {
+      user: user,
+      pass: pass,
+    },
+    tls: {
+      rejectUnauthorized: false,
+    },
+  });
 }
 
 async function sendLeadNotification(inquiry) {

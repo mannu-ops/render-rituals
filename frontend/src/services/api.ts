@@ -4,7 +4,7 @@ const API_BASE_URL =
 // Helper for fetch requests with safety timeout & error recovery
 async function fetchApi<T>(endpoint: string, options?: RequestInit): Promise<T | null> {
   const controller = new AbortController();
-  const timeoutId = setTimeout(() => controller.abort(), 10000); // 10s safety timeout
+  const timeoutId = setTimeout(() => controller.abort(), 15000); // 15s safety timeout
 
   try {
     const res = await fetch(`${API_BASE_URL}${endpoint}`, {
@@ -17,16 +17,18 @@ async function fetchApi<T>(endpoint: string, options?: RequestInit): Promise<T |
 
     clearTimeout(timeoutId);
 
+    const json = await res.json().catch(() => null);
+
     if (!res.ok) {
-      console.warn(`[API] Endpoint ${endpoint} returned status ${res.status}`);
-      return null;
+      console.warn(`[API] Endpoint ${endpoint} returned status ${res.status}`, json);
+      return json as T;
     }
 
-    return await res.json();
+    return json as T;
   } catch (error: any) {
     clearTimeout(timeoutId);
     if (error.name === "AbortError") {
-      console.warn(`[API Timeout] Request to ${endpoint} exceeded 10s timeout.`);
+      console.warn(`[API Timeout] Request to ${endpoint} exceeded 15s timeout.`);
     } else {
       console.warn(`[API Network Error] ${endpoint}:`, error.message || error);
     }

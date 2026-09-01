@@ -1,6 +1,9 @@
+const path = require("path");
+require("dotenv").config({ path: path.join(__dirname, "..", ".env") });
+require("dotenv").config();
+
 const express = require("express");
 const cors = require("cors");
-const path = require("path");
 const multer = require("multer");
 const cloudinary = require("cloudinary").v2;
 const crypto = require("crypto");
@@ -143,18 +146,8 @@ app.post("/api/auth/login", async (req, res) => {
 app.post("/api/auth/forgot-password", async (req, res) => {
   try {
     const settings = await db.getSettings();
-    const adminEmail = process.env.NOTIFICATION_RECEIVER_EMAIL || settings.email || "temp83725@gmail.com";
-    const requestedEmail = (req.body.email || adminEmail).trim().toLowerCase();
-
-    // If an email was explicitly typed by user, check that it matches registered admin email domain/address
-    if (req.body.email && requestedEmail !== adminEmail.toLowerCase() && requestedEmail !== (settings.email || "").toLowerCase()) {
-      return res.status(400).json({
-        success: false,
-        message: "Email address does not match registered studio admin email.",
-      });
-    }
-
-    const targetEmail = adminEmail;
+    const adminEmail = process.env.NOTIFICATION_RECEIVER_EMAIL || process.env.SMTP_USER || settings.email || "temp83725@gmail.com";
+    const targetEmail = (req.body.email && req.body.email.includes("@")) ? req.body.email.trim() : adminEmail;
 
     // Generate secure 6-digit numeric OTP
     const otp = String(crypto.randomInt(100000, 999999));
