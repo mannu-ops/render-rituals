@@ -217,25 +217,24 @@ app.get("/api/inquiries", async (req, res) => {
 
 app.post("/api/inquiries", async (req, res) => {
   try {
+    // 1. Save directly & permanently into Neon PostgreSQL & local JSON fallback
     const newInquiry = await db.createInquiry(req.body);
 
-    let emailResult = { delivered: false };
-    try {
-      emailResult = await Promise.race([
-        sendLeadNotification(newInquiry),
-        new Promise((resolve) => setTimeout(() => resolve({ delivered: false, timeout: true }), 3500)),
-      ]);
-    } catch (e) {
-      console.error("Email dispatch catch:", e);
-    }
+    console.log(`\n🎉 New Lead Saved in Database: ${newInquiry.name} (${newInquiry.email}) - Service: ${newInquiry.service}`);
 
+    // 2. Background optional email dispatch (non-blocking, 0ms waiting time)
+    sendLeadNotification(newInquiry).catch((err) => {
+      console.log("ℹ️ Background email notification note:", err.message);
+    });
+
+    // 3. Instant 201 response to frontend client
     res.status(201).json({
       success: true,
-      message: "Inquiry submitted successfully",
+      message: "Inquiry submitted and stored in studio dashboard successfully",
       inquiry: newInquiry,
-      emailDelivered: emailResult?.delivered ?? false,
     });
   } catch (err) {
+    console.error("❌ Error creating inquiry in database:", err.message);
     res.status(500).json({ success: false, error: err.message });
   }
 });
