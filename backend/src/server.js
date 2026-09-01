@@ -6,22 +6,11 @@ const express = require("express");
 const cors = require("cors");
 const multer = require("multer");
 const cloudinary = require("cloudinary").v2;
-const crypto = require("crypto");
 const { db, initDb, verifyPasscode, hashPasscode } = require("./db");
-const { sendLeadNotification, sendPasswordResetOtpEmail } = require("./email");
+const { sendLeadNotification } = require("./email");
 
 const app = express();
 const PORT = process.env.PORT || 5000;
-
-// OTP Store for Admin Password Reset (In-Memory with 10m TTL)
-const resetOtpStore = new Map();
-
-function maskEmail(email) {
-  if (!email || !email.includes("@")) return "admin email";
-  const [name, domain] = email.split("@");
-  if (name.length <= 3) return `${name[0]}***@${domain}`;
-  return `${name.slice(0, 2)}***${name.slice(-2)}@${domain}`;
-}
 
 // Configure Cloudinary
 cloudinary.config({
@@ -138,123 +127,6 @@ app.post("/api/auth/login", async (req, res) => {
       message: "Invalid master passcode",
     });
   } catch (err) {
-    return res.status(500).json({ success: false, error: err.message });
-  }
-});
-
-// Request Password Reset OTP
-app.post("/api/auth/forgot-password", async (req, res) => {
-  try {
-    const settings = await db.getSettings();
-    const adminEmail = process.env.NOTIFICATION_RECEIVER_EMAIL || process.env.SMTP_USER || settings.email || "temp83725@gmail.com";
-    const targetEmail = (req.body.email && req.body.email.includes("@")) ? req.body.email.trim() : adminEmail;
-
-    // Generate secure 6-digit numeric OTP
-    const otp = String(crypto.randomInt(100000, 999999));
-    const expiresAt = Date.now() + 10 * 60 * 1000; // 10 minutes
-
-    resetOtpStore.set(targetEmail.toLowerCase(), {
-      otp,
-      expiresAt,
-      attempts: 0,
-    });
-
-    console.log("\n=======================================================");
-    console.log(`🔐 [ADMIN RESET OTP] Security Code for ${targetEmail}: >>> ${otp} <<<`);
-    console.log("=======================================================\n");
-
-    let emailResult = { success: false };
-    try {
-      emailResult = await sendPasswordResetOtpEmail(targetEmail, otp);
-    } catch (sendErr) {
-      console.warn("SMTP Delivery Notice:", sendErr.message);
-    }
-
-    return res.json({
-      success: true,
-      message: emailResult.success
-        ? `Security OTP sent to ${maskEmail(targetEmail)}`
-        : `Security OTP generated for ${maskEmail(targetEmail)} (Code: ${otp})`,
-      maskedEmail: maskEmail(targetEmail),
-      targetEmail: targetEmail,
-      otpCode: emailResult.success ? undefined : otp,
-      emailDelivered: emailResult.success,
-    });
-  } catch (err) {
-    console.error("Forgot password error:", err);
-    return res.status(500).json({ success: false, error: err.message });
-  }
-});
-
-// Verify OTP & Reset Passcode
-app.post("/api/auth/reset-password", async (req, res) => {
-  try {
-    const { email, otp, newPasscode } = req.body;
-
-    if (!otp || !newPasscode) {
-      return res.status(400).json({
-        success: false,
-        message: "OTP code and new passcode are required.",
-      });
-    }
-
-    if (newPasscode.length < 4) {
-      return res.status(400).json({
-        success: false,
-        message: "New passcode must be at least 4 characters long.",
-      });
-    }
-
-    const settings = await db.getSettings();
-    const adminEmail = process.env.NOTIFICATION_RECEIVER_EMAIL || settings.email || "temp83725@gmail.com";
-    const targetEmail = (email || adminEmail).trim().toLowerCase();
-
-    const record = resetOtpStore.get(targetEmail);
-
-    if (!record) {
-      return res.status(400).json({
-        success: false,
-        message: "No active reset request found for this email. Please request a new OTP.",
-      });
-    }
-
-    if (Date.now() > record.expiresAt) {
-      resetOtpStore.delete(targetEmail);
-      return res.status(400).json({
-        success: false,
-        message: "Verification OTP has expired. Please request a new code.",
-      });
-    }
-
-    if (record.otp !== otp.trim()) {
-      record.attempts += 1;
-      if (record.attempts >= 5) {
-        resetOtpStore.delete(targetEmail);
-        return res.status(400).json({
-          success: false,
-          message: "Too many incorrect attempts. Please request a new OTP.",
-        });
-      }
-      return res.status(400).json({
-        success: false,
-        message: `Invalid OTP code. ${5 - record.attempts} attempts remaining.`,
-      });
-    }
-
-    // OTP Verified! Update Admin Passcode in Database
-    await db.updateSettings({ adminPasscode: newPasscode });
-
-    // Clean up OTP record
-    resetOtpStore.delete(targetEmail);
-
-    return res.json({
-      success: true,
-      message: "Admin passcode reset successfully!",
-      token: "rr_auth_" + Date.now(),
-      newPasscode,
-    });
-  } catch (err) {
-    console.error("Reset password error:", err);
     return res.status(500).json({ success: false, error: err.message });
   }
 });
