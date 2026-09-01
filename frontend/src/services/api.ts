@@ -53,6 +53,26 @@ export const api = {
     });
   },
 
+  async requestPasswordResetOtp(email?: string) {
+    return fetchApi<{ success: boolean; message: string; maskedEmail: string; targetEmail: string }>(
+      "/auth/forgot-password",
+      {
+        method: "POST",
+        body: JSON.stringify({ email }),
+      }
+    );
+  },
+
+  async resetPasswordWithOtp(params: { email?: string; otp: string; newPasscode: string }) {
+    return fetchApi<{ success: boolean; message: string; token: string; newPasscode: string }>(
+      "/auth/reset-password",
+      {
+        method: "POST",
+        body: JSON.stringify(params),
+      }
+    );
+  },
+
   // ==========================================
   // CLOUDINARY IMAGE UPLOAD
   // ==========================================

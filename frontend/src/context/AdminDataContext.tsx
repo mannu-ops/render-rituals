@@ -38,7 +38,8 @@ export interface StudioSettings {
 interface AdminDataContextType {
   // Auth
   isAuthenticated: boolean;
-  login: (passcode: string) => boolean;
+  login: (passcode: string) => Promise<boolean> | boolean;
+  authenticateDirectly: (token?: string, updatedPasscode?: string) => void;
   logout: () => void;
 
   // Projects
@@ -279,15 +280,40 @@ export function AdminDataProvider({ children }: { children: React.ReactNode }) {
   }, [projects, services, testimonials, inquiries, settings, isLoaded]);
 
   // Auth methods
-  const login = (passcode: string): boolean => {
+  const authenticateDirectly = (token?: string, updatedPasscode?: string) => {
+    setIsAuthenticated(true);
+    try {
+      localStorage.setItem("rr_admin_auth", "true");
+      if (token) localStorage.setItem("rr_admin_token", token);
+    } catch (e) {}
+    if (updatedPasscode) {
+      setSettings((prev) => {
+        const next = { ...prev, adminPasscode: updatedPasscode };
+        try {
+          localStorage.setItem("rr_settings", JSON.stringify(next));
+        } catch (e) {}
+        return next;
+      });
+    }
+  };
+
+  const login = async (passcode: string): Promise<boolean> => {
+    // 1. Direct match with current state
     if (passcode.trim() === settings.adminPasscode.trim()) {
-      setIsAuthenticated(true);
-      try {
-        localStorage.setItem("rr_admin_auth", "true");
-      } catch (e) {}
-      api.login(passcode);
+      authenticateDirectly(undefined, passcode);
+      api.login(passcode).catch(() => {});
       return true;
     }
+
+    // 2. Also verify against backend API (handles bcrypt hashed passcode)
+    try {
+      const res = await api.login(passcode);
+      if (res && res.success) {
+        authenticateDirectly(res.token, passcode);
+        return true;
+      }
+    } catch (e) {}
+
     return false;
   };
 
@@ -295,6 +321,7 @@ export function AdminDataProvider({ children }: { children: React.ReactNode }) {
     setIsAuthenticated(false);
     try {
       localStorage.removeItem("rr_admin_auth");
+      localStorage.removeItem("rr_admin_token");
     } catch (e) {}
   };
 
@@ -493,6 +520,7 @@ export function AdminDataProvider({ children }: { children: React.ReactNode }) {
       value={{
         isAuthenticated,
         login,
+        authenticateDirectly,
         logout,
         projects,
         addProject,
